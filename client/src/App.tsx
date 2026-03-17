@@ -14,6 +14,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Indicadores from "./pages/Indicadores";
+import IndicadorPage from "./pages/IndicadorPage";
 import Metodologia from "./pages/Metodologia";
 import Glosario from "./pages/Glosario";
 import Contacto from "./pages/Contacto";
@@ -23,6 +24,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/indicadores" component={Indicadores} />
+      <Route path="/indicador/:id" component={IndicadorPage} />
       <Route path="/metodologia" component={Metodologia} />
       <Route path="/glosario" component={Glosario} />
       <Route path="/contacto" component={Contacto} />
