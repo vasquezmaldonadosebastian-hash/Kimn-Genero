@@ -160,12 +160,12 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
           <div className="relative w-full bg-gradient-to-br from-[#F3E8F9] to-[#EDE7F6]" style={{ minHeight: "500px" }}>
             {tieneIframe ? (
               <iframe
-                title={indicador["Nombre del indicador"]}
+                title="PreVersion"
                 width="100%"
                 height="500"
                 src={iframeSrc}
                 frameBorder="0"
-                allowFullScreen
+                allowFullScreen={true}
                 style={{ display: "block" }}
               />
             ) : (
