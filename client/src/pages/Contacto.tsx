@@ -73,8 +73,8 @@ export default function Contacto() {
                   </div>
                   <div>
                     <div className="text-xs text-gray-400 mb-0.5">Correo electrónico</div>
-                    <a href="mailto:observatorio@institucion.cl" className="text-sm text-[#673AB7] hover:underline font-medium">
-                      observatorio@institucion.cl
+                    <a href="mailto:observatorio@uct.cl" className="text-sm text-[#673AB7] hover:underline font-medium">
+                      observatorio@uct.cl
                     </a>
                   </div>
                 </li>
@@ -93,7 +93,7 @@ export default function Contacto() {
                   </div>
                   <div>
                     <div className="text-xs text-gray-400 mb-0.5">Dirección</div>
-                    <span className="text-sm text-gray-700">Av. Institución 1234<br />Santiago, Chile</span>
+                    <span className="text-sm text-gray-700">Av. Caupolicán 1296<br />Temuco, Chile</span>
                   </div>
                 </li>
               </ul>

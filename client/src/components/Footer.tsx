@@ -33,13 +33,7 @@ export default function Footer() {
             {/* Partner logos placeholder */}
             <div className="flex flex-wrap gap-3">
               <div className="h-8 px-3 bg-white/10 rounded flex items-center text-xs text-gray-300 font-medium">
-                Institución A
-              </div>
-              <div className="h-8 px-3 bg-white/10 rounded flex items-center text-xs text-gray-300 font-medium">
-                Institución B
-              </div>
-              <div className="h-8 px-3 bg-white/10 rounded flex items-center text-xs text-gray-300 font-medium">
-                Institución C
+                Universidad Católica de Temuco
               </div>
             </div>
           </div>
@@ -101,8 +95,8 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-[#CE93D8] mt-0.5 flex-shrink-0" />
                 <div>
                   <div className="text-xs text-gray-400 mb-0.5">Consultas sobre datos</div>
-                  <a href="mailto:observatorio@institucion.cl" className="text-sm text-gray-200 hover:text-[#CE93D8] transition-colors">
-                    observatorio@institucion.cl
+                  <a href="mailto:observatorio@uct.cl" className="text-sm text-gray-200 hover:text-[#CE93D8] transition-colors">
+                    observatorio@uct.cl
                   </a>
                 </div>
               </li>
@@ -117,14 +111,14 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-[#CE93D8] mt-0.5 flex-shrink-0" />
                 <div>
                   <div className="text-xs text-gray-400 mb-0.5">Dirección</div>
-                  <span className="text-sm text-gray-200">Av. Institución 1234, Chile</span>
+                  <span className="text-sm text-gray-200">Av. Caupolicán 1296, Temuco, Chile</span>
                 </div>
               </li>
             </ul>
 
             <div className="mt-6 p-4 bg-white/5 rounded-lg border border-white/10">
               <p className="text-xs text-gray-400 leading-relaxed">
-                La calidad de las cifras presentadas es de exclusiva responsabilidad de la institución productora del indicador.
+                La calidad de las cifras presentadas es de exclusiva responsabilidad de la Universidad Católica de Temuco como institución productora del indicador.
               </p>
             </div>
           </div>

@@ -202,7 +202,7 @@ export default function Metodologia() {
                   Nota sobre la calidad de los datos
                 </h3>
                 <p className="text-sm text-gray-300 leading-relaxed">
-                  La calidad de las cifras presentadas en esta plataforma es de exclusiva responsabilidad de la institución productora del indicador. Si presenta consultas respecto a algún indicador, puede dirigirlas al equipo del Observatorio a través del formulario de contacto.
+                  La calidad de las cifras presentadas en esta plataforma es de exclusiva responsabilidad de la Universidad Católica de Temuco como institución productora del indicador. Si presenta consultas respecto a algún indicador, puede dirigirlas al equipo del Observatorio a través del formulario de contacto.
                 </p>
               </div>
             </div>

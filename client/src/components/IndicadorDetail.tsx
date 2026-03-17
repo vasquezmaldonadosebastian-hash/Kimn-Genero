@@ -6,6 +6,7 @@
 
 import { useState } from "react";
 import { ChevronDown, RefreshCw, Expand, Share2, Download, Info } from "lucide-react";
+import Latex from "react-latex-next";
 
 interface IndicadorData {
   "Nombre del indicador": string;
@@ -46,8 +47,8 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
     }));
   };
 
-  // Determinar si tiene iframe (solo el primero)
-  const tieneIframe = indicador["Nro indicador"] === 1.0;
+  // Determinar si tiene iframe (solo 02VGGE-04, que es el indicador 4)
+  const tieneIframe = indicador["Código del indicador"] === "02VGGE-04";
   const iframeSrc: string | undefined = tieneIframe
     ? "https://app.powerbi.com/view?r=eyJrIjoiODY2ZGRjNGEtZDEzMC00ZmMyLWFlY2YtOGM3N2E1ZTMwODFkIiwidCI6IjBkODQ5NzNiLThiYjctNDQ1OC05YzI5LTIxZmFiNDZmMTUyYyIsImMiOjR9&pageName=5a15333ea46c0791c848"
     : undefined;
@@ -225,9 +226,9 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
                 Fórmula
               </h3>
             </div>
-            <p className="text-xs text-gray-600 leading-relaxed font-mono bg-gray-50 p-3 rounded">
-              {indicador["Formula del cálculo"] || "Por definir"}
-            </p>
+            <div className="text-xs text-gray-600 leading-relaxed bg-gray-50 p-3 rounded overflow-x-auto">
+              <Latex>{`$$${indicador["Formula del cálculo"] || "Por definir"}$$`}</Latex>
+            </div>
           </div>
 
           <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
@@ -321,8 +322,8 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
               <div className="px-6 py-4 border-t border-gray-100">
                 <div className="mb-4">
                   <p className="text-xs text-gray-500 font-semibold mb-2">FÓRMULA DE CÁLCULO</p>
-                  <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 font-mono text-xs text-gray-700 overflow-x-auto">
-                    {indicador["Formula del cálculo"] || "Por definir"}
+                  <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 text-xs text-gray-700 overflow-x-auto">
+                    <Latex>{`$$${indicador["Formula del cálculo"] || "Por definir"}$$`}</Latex>
                   </div>
                 </div>
 
@@ -379,7 +380,7 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
                 </div>
                 <div className="bg-[#FFF8E1] border-l-4 border-[#F59E0B] rounded-r-lg p-3 mt-4">
                   <p className="text-xs text-[#78350F]">
-                    <strong>⚠️ Nota:</strong> La calidad de las cifras presentadas es de exclusiva responsabilidad de la institución productora del indicador.
+                    <strong>⚠️ Nota:</strong> La calidad de las cifras presentadas es de exclusiva responsabilidad de la Universidad Católica de Temuco como institución productora del indicador.
                   </p>
                 </div>
               </div>
