@@ -10,8 +10,8 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import HeaderUCT from "./components/HeaderUCT";
+import FooterUCT from "./components/FooterUCT";
 import Home from "./pages/Home";
 import Indicadores from "./pages/Indicadores";
 import IndicadorPage from "./pages/IndicadorPage";
@@ -41,11 +41,11 @@ function App() {
         <TooltipProvider>
           <Toaster position="top-right" />
           <div className="flex flex-col min-h-screen">
-            <Header />
+            <HeaderUCT />
             <main className="flex-1">
               <Router />
             </main>
-            <Footer />
+            <FooterUCT />
           </div>
         </TooltipProvider>
       </ThemeProvider>

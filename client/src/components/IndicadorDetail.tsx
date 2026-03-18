@@ -336,18 +336,40 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
 
             {openAccordions.metodologia && (
               <div className="px-6 py-4 border-t border-gray-100">
-                <div className="mb-4">
-                  <p className="text-xs text-gray-500 font-semibold mb-2">FÓRMULA DE CÁLCULO</p>
+                <div className="mb-6">
+                  <h4 className="text-sm font-bold text-gray-900 mb-4" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                    4.2. Fórmula Matemática
+                  </h4>
+                  
+                  <div className="bg-gray-50 rounded-lg p-6 border border-gray-200 mb-4 flex justify-center overflow-x-auto">
+                    <div className="text-center">
+                      <Latex>{`$$${indicador["Formula del cálculo"] || "Por definir"}$$`}</Latex>
+                    </div>
+                  </div>
                   
                   {formulaLarga && (
-                    <div className="bg-[#F0F4FF] rounded-lg p-3 mb-3 border border-[#D0D9FF] text-xs">
-                      <p className="font-semibold text-[#3730A3] mb-2">Nota: Fórmula simplificada</p>
-                      <p className="text-gray-700">Para fórmulas extensas, consulte el instructivo detallado para la definición completa de variables y componentes.</p>
+                    <div className="bg-[#F0F4FF] rounded-lg p-3 mb-4 border border-[#D0D9FF] text-xs">
+                      <p className="font-semibold text-[#3730A3] mb-2">📌 Nota: Fórmula simplificada</p>
+                      <p className="text-gray-700">Para la definición completa de variables y componentes, consulte el instructivo detallado adjunto.</p>
                     </div>
                   )}
                   
-                  <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 text-xs text-gray-700 overflow-x-auto">
-                    <Latex>{`$$${indicador["Formula del cálculo"] || "Por definir"}$$`}</Latex>
+                  <div className="bg-white rounded-lg p-4 border border-gray-200">
+                    <p className="text-sm font-bold text-gray-900 mb-3">Donde:</p>
+                    <ul className="space-y-2 text-sm text-gray-700">
+                      <li className="flex gap-3">
+                        <span className="text-[#8E44AD] font-bold">•</span>
+                        <span><strong>Numerador:</strong> Cantidad de elementos que cumplen el criterio de evaluación.</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-[#8E44AD] font-bold">•</span>
+                        <span><strong>Denominador:</strong> Total de elementos evaluados en el período (semestre/año).</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-[#8E44AD] font-bold">•</span>
+                        <span><strong>× 100:</strong> Factor de conversión a porcentaje (%).</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
 
