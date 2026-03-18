@@ -22,7 +22,7 @@ export default function HeaderUCT() {
 
   const mainNavLinks = [
     { label: "Inicio", href: "/" },
-    { label: "Quiénes Somos", href: "/metodologia" },
+    { label: "Modelo", href: "/metodologia" },
     { label: "Política de Género", href: "#" },
     { label: "Indicadores", href: "/indicadores" },
     { label: "Glosario", href: "/glosario" },
