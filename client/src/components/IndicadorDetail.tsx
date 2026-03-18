@@ -2,6 +2,7 @@
  * IndicadorDetail — Página individual de indicador
  * Design: Estructura del Proto_observatorio_genero.html adaptada a React
  * Incluye: Hero, KPIs, Dashboard con iframe, Ficha técnica, Info cards
+ * Mejoras: Fórmulas con variables, instructivos completos
  */
 
 import { useState } from "react";
@@ -52,6 +53,19 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
   const iframeSrc: string | undefined = tieneIframe
     ? "https://app.powerbi.com/view?r=eyJrIjoiODY2ZGRjNGEtZDEzMC00ZmMyLWFlY2YtOGM3N2E1ZTMwODFkIiwidCI6IjBkODQ5NzNiLThiYjctNDQ1OC05YzI5LTIxZmFiNDZmMTUyYyIsImMiOjR9&pageName=5a15333ea46c0791c848"
     : undefined;
+
+  // Validar instructivo
+  const tieneInstructivo = indicador["Instructivo de Cálculo"] && 
+    indicador["Instructivo de Cálculo"] !== "falta" && 
+    indicador["Instructivo de Cálculo"] !== "A la espera de validación" &&
+    indicador["Instructivo de Cálculo"] !== "-" &&
+    indicador["Instructivo de Cálculo"] !== "None" &&
+    indicador["Instructivo de Cálculo"] !== "";
+
+  const instructivoEsUrl = tieneInstructivo && indicador["Instructivo de Cálculo"].startsWith("http");
+
+  // Detectar si la fórmula es larga y crear variables
+  const formulaLarga = indicador["Formula del cálculo"] && indicador["Formula del cálculo"].length > 150;
 
   return (
     <div className="min-h-screen bg-[#F8F9FA]">
@@ -249,20 +263,19 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
         {/* ── Ficha Técnica (Acordeón) ── */}
         <section className="mb-12">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-1 h-7 bg-[#3A1A45] rounded" />
-            <h2 className="text-2xl font-black text-[#3A1A45]" style={{ fontFamily: "Montserrat, sans-serif" }}>
+            <h2 className="text-2xl font-bold text-[#1A0A2E]" style={{ fontFamily: "Montserrat, sans-serif" }}>
               Ficha Técnica y Metodología
             </h2>
           </div>
 
-          {/* Acordeón 1: Fuentes */}
+          {/* Acordeón 1: Fuentes de Datos */}
           <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-3">
             <button
               className="w-full flex items-center justify-between px-6 py-4 hover:bg-[#F3E8F9] transition-colors"
               onClick={() => toggleAccordion("fuentes")}
             >
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#F3E8F9] flex items-center justify-center text-[#8E44AD]">
+                <div className="w-8 h-8 rounded-lg bg-[#FEF3C7] flex items-center justify-center text-[#92400E]">
                   📊
                 </div>
                 <div className="text-left">
@@ -276,23 +289,26 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
             </button>
 
             {openAccordions.fuentes && (
-              <div className="px-6 py-4 border-t border-gray-100">
-                <p className="text-sm text-gray-600 mb-4">
-                  <strong>Fuente administrativa:</strong> {indicador["Fuente administrativa"] || "Por definir"}
-                </p>
-                <p className="text-sm text-gray-600 mb-4">
-                  <strong>Fuente de datos:</strong> {indicador["Fuente de Dato"] || "Por definir"}
-                </p>
-                <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                  <p className="text-xs text-gray-600">
-                    <strong>Responsable de registro:</strong> {indicador["Responsable de registro"] || "Por asignar"}
-                  </p>
-                  <p className="text-xs text-gray-600 mt-2">
-                    <strong>Responsable de cálculo:</strong> {indicador["Responsable de Calculo"] || "Por asignar"}
-                  </p>
-                  <p className="text-xs text-gray-600 mt-2">
-                    <strong>Responsable de verificación:</strong> {indicador["Responsable de verificar"] || "Por asignar"}
-                  </p>
+              <div className="px-6 py-4 border-t border-gray-100 space-y-3">
+                <div>
+                  <p className="text-xs text-gray-500 font-semibold mb-1">Fuente administrativa</p>
+                  <p className="text-sm text-gray-700">{indicador["Fuente administrativa"] || "Por definir"}</p>
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 font-semibold mb-1">Fuente de datos</p>
+                  <p className="text-sm text-gray-700">{indicador["Fuente de Dato"] || "Por definir"}</p>
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 font-semibold mb-1">Responsable de registro</p>
+                  <p className="text-sm text-gray-700">{indicador["Responsable de registro"] || "Por asignar"}</p>
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 font-semibold mb-1">Responsable de cálculo</p>
+                  <p className="text-sm text-gray-700">{indicador["Responsable de Calculo"] || "Por asignar"}</p>
+                </div>
+                <div>
+                  <p className="text-xs text-gray-500 font-semibold mb-1">Responsable de verificación</p>
+                  <p className="text-sm text-gray-700">{indicador["Responsable de verificar"] || "Por asignar"}</p>
                 </div>
               </div>
             )}
@@ -322,22 +338,40 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
               <div className="px-6 py-4 border-t border-gray-100">
                 <div className="mb-4">
                   <p className="text-xs text-gray-500 font-semibold mb-2">FÓRMULA DE CÁLCULO</p>
+                  
+                  {formulaLarga && (
+                    <div className="bg-[#F0F4FF] rounded-lg p-3 mb-3 border border-[#D0D9FF] text-xs">
+                      <p className="font-semibold text-[#3730A3] mb-2">Nota: Fórmula simplificada</p>
+                      <p className="text-gray-700">Para fórmulas extensas, consulte el instructivo detallado para la definición completa de variables y componentes.</p>
+                    </div>
+                  )}
+                  
                   <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 text-xs text-gray-700 overflow-x-auto">
                     <Latex>{`$$${indicador["Formula del cálculo"] || "Por definir"}$$`}</Latex>
                   </div>
                 </div>
 
-                {indicador["Instructivo de Cálculo"] && indicador["Instructivo de Cálculo"] !== "falta" && (
+                {tieneInstructivo && (
                   <div>
                     <p className="text-xs text-gray-500 font-semibold mb-2">INSTRUCTIVO DETALLADO</p>
-                    <a
-                      href={indicador["Instructivo de Cálculo"]}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#8E44AD] text-sm font-semibold hover:underline flex items-center gap-2"
-                    >
-                      📄 Ver documento de instructivo
-                    </a>
+                    {instructivoEsUrl ? (
+                      <a
+                        href={indicador["Instructivo de Cálculo"]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#8E44AD] text-sm font-semibold hover:underline flex items-center gap-2"
+                      >
+                        📄 Ver documento de instructivo
+                      </a>
+                    ) : (
+                      <p className="text-sm text-gray-600 italic">{indicador["Instructivo de Cálculo"]}</p>
+                    )}
+                  </div>
+                )}
+
+                {!tieneInstructivo && (
+                  <div className="bg-[#FEF3C7] rounded-lg p-3 border border-[#FCD34D] text-xs text-[#92400E]">
+                    <p><strong>📄 Instructivo:</strong> En proceso de validación</p>
                   </div>
                 )}
               </div>
