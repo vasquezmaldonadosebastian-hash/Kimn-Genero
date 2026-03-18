@@ -150,8 +150,7 @@ export default function Indicadores() {
             {filtrados.map((indicador) => {
               const color = getColorForArea(indicador["Área"]);
               return (
-                <Link key={indicador["Nro indicador"]} href={`/indicador/${indicador["Nro indicador"]}`}>
-                  <a className="group h-full">
+                <Link key={indicador["Nro indicador"]} href={`/indicador/${indicador["Nro indicador"]}`} className="group h-full">
                     <div
                       className="h-full bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 hover:border-[#EDE7F6]"
                     >
@@ -224,7 +223,6 @@ export default function Indicadores() {
                         </button>
                       </div>
                     </div>
-                  </a>
                 </Link>
               );
             })}
