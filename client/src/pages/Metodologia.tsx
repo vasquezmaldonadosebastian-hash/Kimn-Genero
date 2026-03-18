@@ -1,40 +1,114 @@
 /*
  * Metodología — Observatorio de Indicadores de Género
- * Design: Clean academic layout with sections, blockquotes, and structured content
+ * Design: Comprehensive academic layout with model definition, state of the art, implementation methodology, and work plan
  */
 
-import { BookOpen, Target, Database, RefreshCw, CheckCircle2 } from "lucide-react";
+import { BookOpen, Target, Database, RefreshCw, CheckCircle2, Layers, Zap, Users, BarChart3 } from "lucide-react";
 
 const principios = [
   {
     icono: <Target className="w-5 h-5 text-[#673AB7]" />,
     titulo: "Pertinencia",
-    descripcion: "Los indicadores seleccionados responden a necesidades concretas de información para el diseño y evaluación de políticas públicas con enfoque de género.",
+    descripcion: "Los indicadores responden a necesidades concretas de información para el diseño y evaluación de políticas públicas con enfoque de género.",
   },
   {
     icono: <CheckCircle2 className="w-5 h-5 text-[#673AB7]" />,
     titulo: "Confiabilidad",
-    descripcion: "Los datos provienen de fuentes oficiales, encuestas estadísticas con diseño probabilístico y registros administrativos validados por instituciones del Estado.",
+    descripcion: "Los datos provienen de fuentes oficiales, encuestas estadísticas con diseño probabilístico y registros administrativos validados.",
   },
   {
     icono: <Database className="w-5 h-5 text-[#673AB7]" />,
     titulo: "Desagregación",
-    descripcion: "Todos los indicadores se presentan desagregados por sexo como mínimo. Cuando la información lo permite, se incorporan desagregaciones adicionales por edad, región y nivel socioeconómico.",
+    descripcion: "Todos los indicadores se presentan desagregados por sexo como mínimo, con desagregaciones adicionales por edad, región y nivel socioeconómico.",
   },
   {
     icono: <RefreshCw className="w-5 h-5 text-[#673AB7]" />,
     titulo: "Actualización periódica",
-    descripcion: "Los indicadores se actualizan con la periodicidad de sus fuentes primarias, garantizando que la plataforma refleje la situación más reciente disponible.",
+    descripcion: "Los indicadores se actualizan con la periodicidad de sus fuentes primarias, garantizando información reciente.",
   },
 ];
 
-const dimensiones = [
-  { nombre: "Mercado Laboral", indicadores: ["Brecha salarial", "Tasa de participación", "Desempleo por sexo"] },
-  { nombre: "Educación y Ciencia", indicadores: ["Matrícula por sexo", "Titulación", "Investigadoras"] },
-  { nombre: "Cargos Directivos", indicadores: ["Sector público", "Directorios privados", "Poder Judicial"] },
-  { nombre: "Violencia de Género", indicadores: ["Femicidios", "Violencia intrafamiliar", "Acceso a justicia"] },
-  { nombre: "Salud", indicadores: ["Esperanza de vida", "Salud reproductiva", "Acceso a servicios"] },
-  { nombre: "Uso del Tiempo", indicadores: ["Trabajo no remunerado", "Cuidados", "Trabajo doméstico"] },
+const etapas = [
+  {
+    numero: 1,
+    titulo: "Diseño",
+    descripcion: "Planificación estratégica, definición de indicadores y ajuste a cambios normativos.",
+    icono: <Target className="w-5 h-5" />,
+  },
+  {
+    numero: 2,
+    titulo: "Implementación",
+    descripcion: "Ejecución de planes de acción basados en diagnósticos participativos.",
+    icono: <Zap className="w-5 h-5" />,
+  },
+  {
+    numero: 3,
+    titulo: "Seguimiento",
+    descripcion: "Monitoreo operativo y estratégico de resultados para retroalimentación institucional.",
+    icono: <BarChart3 className="w-5 h-5" />,
+  },
+];
+
+const estandares = [
+  {
+    nivel: "Fortalecer",
+    descripcion: "Capacidades personales y colectivas en perspectiva de género",
+    color: "bg-[#E8D5F2]",
+    textColor: "text-[#5E2750]",
+  },
+  {
+    nivel: "Consolidar",
+    descripcion: "Institucionalización con garantías de sostenibilidad",
+    color: "bg-[#D1B3E0]",
+    textColor: "text-[#3A1A45]",
+  },
+  {
+    nivel: "Transformar",
+    descripcion: "Cambio sistémico y transformación de cultura organizacional",
+    color: "bg-[#8E44AD]",
+    textColor: "text-white",
+  },
+];
+
+const ambitos = [
+  {
+    titulo: "Formación Continua",
+    descripcion: "Desarrollo de capacidades en perspectiva de género para toda la comunidad universitaria.",
+    icono: "📚",
+  },
+  {
+    titulo: "Participación Activa Estamental",
+    descripcion: "Involucramiento de estudiantes, académicos y administrativos en decisiones institucionales.",
+    icono: "👥",
+  },
+  {
+    titulo: "Sensibilización y Difusión",
+    descripcion: "Comunicación estratégica para transformación cultural hacia la equidad.",
+    icono: "📢",
+  },
+  {
+    titulo: "Monitoreo y Evaluación",
+    descripcion: "Seguimiento basado en evidencia mediante indicadores estratégicos.",
+    icono: "📊",
+  },
+];
+
+const fases = [
+  {
+    numero: 1,
+    titulo: "Diagnóstico Institucional",
+    descripcion: "El Observatorio de Equidad de Género (OEG) analiza información para identificar nudos críticos por unidad.",
+  },
+  {
+    numero: 2,
+    titulo: "Autodiagnóstico Participativo",
+    descripcion: "Realización de talleres con las unidades para contextualizar brechas y priorizar acciones.",
+  },
+  {
+    numero: 3,
+    titulo: "Formulación de Planes de Acción",
+    descripcion: "Cada unidad responsable diseña planes con objetivos, actividades y plazos validados técnicamente.",
+  },
 ];
 
 export default function Metodologia() {
@@ -57,7 +131,7 @@ export default function Metodologia() {
             Metodología
           </h1>
           <p className="text-gray-600 max-w-2xl leading-relaxed">
-            Marco conceptual, criterios de selección de indicadores y procedimientos de cálculo utilizados en el Observatorio de Indicadores de Género.
+            Modelo de Promoción de la Igualdad de Género y No Discriminación: marco conceptual, implementación y operacionalización.
           </p>
         </div>
       </div>
@@ -65,35 +139,184 @@ export default function Metodologia() {
       <div className="container py-10">
         <div className="max-w-4xl mx-auto space-y-10">
 
-          {/* Marco conceptual */}
+          {/* 1. Definición del Modelo */}
           <section className="bg-white rounded-xl p-8 shadow-sm border border-[#EDE7F6]">
             <h2
               className="text-xl font-bold text-[#1A0A2E] mb-4"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              Marco Conceptual
+              1. Definición del Modelo
             </h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              El Observatorio adopta el enfoque de género como marco analítico central, entendiendo el género como una construcción social que determina roles, responsabilidades y oportunidades diferenciadas para hombres y mujeres en la sociedad.
-            </p>
-            <blockquote className="border-l-4 border-[#673AB7] pl-5 py-3 bg-[#F8F6FC] rounded-r-lg my-6">
-              <p className="text-sm text-gray-700 italic leading-relaxed">
-                "Un indicador de género es una medida que señala el estado o nivel de las diferencias entre hombres y mujeres en un momento del tiempo, expresando en particular las desigualdades que resultan de la diferencia sexual o de género, con interés en aquellas que reflejan situaciones evitables o injustas."
-              </p>
-              <cite className="text-xs text-[#673AB7] font-semibold mt-2 block">— Instituto Nacional de Estadísticas (INE), 2019, p. 19</cite>
-            </blockquote>
             <p className="text-gray-700 leading-relaxed">
-              Los indicadores presentados en esta plataforma buscan visibilizar las brechas de género existentes en distintas dimensiones de la vida social, económica y política, proporcionando evidencia para el diseño, implementación y evaluación de políticas públicas orientadas a la igualdad de género.
+              El <strong>Modelo de Promoción de la Igualdad de Género y No Discriminación</strong> es un mecanismo institucional de mejora continua diseñado para instalar capacidades organizacionales que aseguren la transversalización de la perspectiva de género en todas las áreas de la Universidad Católica de Temuco.
+            </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              Su fin principal es permitir que la planta administrativa, académica y el estudiantado desarrollen sus trayectorias de manera equitativa y sin distinciones de género, promoviendo una cultura institucional inclusiva y libre de discriminación.
             </p>
           </section>
 
-          {/* Principios */}
+          {/* 2. Estado del Arte */}
+          <section className="bg-white rounded-xl p-8 shadow-sm border border-[#EDE7F6]">
+            <h2
+              className="text-xl font-bold text-[#1A0A2E] mb-6"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+            >
+              2. Estado del Arte (Antecedentes y Contexto)
+            </h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-semibold text-[#1A0A2E] mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  Marco Normativo
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-sm">
+                  El modelo responde a exigencias legales nacionales como la <strong>Ley N°21.369</strong> (acoso y violencia de género en educación superior), la <strong>Ley N°21.643</strong> (acoso laboral y sexual) y la <strong>Ley N°21.645</strong> (conciliación vida laboral y familiar). Asimismo, se alinea con los criterios de la Comisión Nacional de Acreditación (CNA) sobre equidad y diversidad.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[#1A0A2E] mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  Trayectoria Institucional
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-sm">
+                  El modelo recoge avances previos de la UC Temuco, como la <strong>Política de Género (2019)</strong> y la creación de la <strong>Dirección de Género (2020)</strong>, consolidando una trayectoria institucional de compromiso con la equidad.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[#1A0A2E] mb-2" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                  Diagnóstico de Brechas
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-sm">
+                  El modelo se fundamenta en una revisión de modelos nacionales e internacionales y en los resultados del <strong>Diagnóstico de Brechas y Desigualdades de Género de 2022</strong> realizado en la universidad, identificando nudos críticos y oportunidades de mejora.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* 3. Metodología de Implementación */}
+          <section className="bg-white rounded-xl p-8 shadow-sm border border-[#EDE7F6]">
+            <h2
+              className="text-xl font-bold text-[#1A0A2E] mb-6"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+            >
+              3. Metodología de Implementación
+            </h2>
+            
+            <div className="mb-8">
+              <h3 className="font-semibold text-[#1A0A2E] mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                Ciclo PHVA (Planificar, Hacer, Verificar, Actuar)
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {etapas.map((etapa) => (
+                  <div key={etapa.numero} className="bg-[#F8F6FC] rounded-lg p-5 border border-[#EDE7F6]">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-8 h-8 rounded-full bg-[#673AB7] text-white flex items-center justify-center text-sm font-bold">
+                        {etapa.numero}
+                      </div>
+                      <h4 className="font-semibold text-[#1A0A2E]" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                        {etapa.titulo}
+                      </h4>
+                    </div>
+                    <p className="text-sm text-gray-700 leading-relaxed">{etapa.descripcion}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mb-8">
+              <h3 className="font-semibold text-[#1A0A2E] mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                Ruta Progresiva de Transversalización
+              </h3>
+              <p className="text-gray-700 leading-relaxed text-sm mb-4">
+                El modelo establece tres estándares de avance que permiten medir el progreso institucional:
+              </p>
+              <div className="space-y-3">
+                {estandares.map((est) => (
+                  <div key={est.nivel} className={`${est.color} rounded-lg p-4 border border-[#EDE7F6]`}>
+                    <div className={`font-semibold ${est.textColor} mb-1`} style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                      {est.nivel}
+                    </div>
+                    <div className={`text-sm ${est.textColor} opacity-90`}>{est.descripcion}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-[#1A0A2E] mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                Ámbitos Estratégicos de Acción
+              </h3>
+              <p className="text-gray-700 leading-relaxed text-sm mb-4">
+                El trabajo se organiza en cuatro ejes transversales:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {ambitos.map((ambito) => (
+                  <div key={ambito.titulo} className="bg-[#F8F6FC] rounded-lg p-5 border border-[#EDE7F6]">
+                    <div className="text-2xl mb-2">{ambito.icono}</div>
+                    <h4 className="font-semibold text-[#1A0A2E] mb-2 text-sm" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                      {ambito.titulo}
+                    </h4>
+                    <p className="text-sm text-gray-700 leading-relaxed">{ambito.descripcion}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 4. Plan de Trabajo */}
+          <section className="bg-white rounded-xl p-8 shadow-sm border border-[#EDE7F6]">
+            <h2
+              className="text-xl font-bold text-[#1A0A2E] mb-6"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
+            >
+              4. Plan de Trabajo (Operacionalización)
+            </h2>
+            
+            <div className="mb-8">
+              <h3 className="font-semibold text-[#1A0A2E] mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                Dimensiones e Indicadores
+              </h3>
+              <p className="text-gray-700 leading-relaxed text-sm mb-4">
+                Se definieron <strong>8 dimensiones clave</strong> operacionalizadas mediante <strong>19 indicadores estratégicos</strong> que permiten monitorear el avance en la transversalización de la perspectiva de género:
+              </p>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li className="flex gap-3"><span className="text-[#673AB7] font-bold">•</span> <span><strong>Institucionalización:</strong> Normativas y políticas con perspectiva de género</span></li>
+                <li className="flex gap-3"><span className="text-[#673AB7] font-bold">•</span> <span><strong>Violencia de Género:</strong> Conocimiento y cumplimiento de protocolos</span></li>
+                <li className="flex gap-3"><span className="text-[#673AB7] font-bold">•</span> <span><strong>Corresponsabilidad:</strong> Conciliación vida laboral y familiar</span></li>
+                <li className="flex gap-3"><span className="text-[#673AB7] font-bold">•</span> <span><strong>Trayectorias Laborales:</strong> Participación y cargos directivos</span></li>
+                <li className="flex gap-3"><span className="text-[#673AB7] font-bold">•</span> <span>Y otras dimensiones de análisis estratégico</span></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-[#1A0A2E] mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                Fases de la Implementación
+              </h3>
+              <div className="space-y-3">
+                {fases.map((fase) => (
+                  <div key={fase.numero} className="bg-[#F8F6FC] rounded-lg p-5 border border-[#EDE7F6]">
+                    <div className="flex items-start gap-4">
+                      <div className="w-8 h-8 rounded-full bg-[#673AB7] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
+                        {fase.numero}
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-[#1A0A2E] mb-1" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                          {fase.titulo}
+                        </h4>
+                        <p className="text-sm text-gray-700 leading-relaxed">{fase.descripcion}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 5. Principios Rectores */}
           <section>
             <h2
               className="text-xl font-bold text-[#1A0A2E] mb-6"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
-              Principios Rectores
+              5. Principios Rectores
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {principios.map((p) => (
@@ -110,79 +333,6 @@ export default function Metodologia() {
                     </h3>
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed">{p.descripcion}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Dimensiones */}
-          <section className="bg-white rounded-xl p-8 shadow-sm border border-[#EDE7F6]">
-            <h2
-              className="text-xl font-bold text-[#1A0A2E] mb-2"
-              style={{ fontFamily: 'Montserrat, sans-serif' }}
-            >
-              Dimensiones de Análisis
-            </h2>
-            <p className="text-gray-600 text-sm mb-6 leading-relaxed">
-              El observatorio organiza los indicadores en seis dimensiones temáticas que cubren los principales ámbitos de desigualdad de género identificados en la literatura especializada y los marcos internacionales de derechos humanos.
-            </p>
-            <div className="space-y-3">
-              {dimensiones.map((dim, i) => (
-                <div key={dim.nombre} className="flex items-start gap-4 p-4 rounded-lg bg-[#F8F6FC] border border-[#EDE7F6]">
-                  <div
-                    className="w-7 h-7 rounded-full bg-[#673AB7] text-white flex items-center justify-center text-xs font-bold flex-shrink-0"
-                    style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  >
-                    {i + 1}
-                  </div>
-                  <div>
-                    <div
-                      className="font-semibold text-[#1A0A2E] text-sm mb-1"
-                      style={{ fontFamily: 'Montserrat, sans-serif' }}
-                    >
-                      {dim.nombre}
-                    </div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {dim.indicadores.map((ind) => (
-                        <span
-                          key={ind}
-                          className="px-2 py-0.5 bg-white text-[#673AB7] text-xs rounded-full border border-[#EDE7F6] font-medium"
-                        >
-                          {ind}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Proceso de actualización */}
-          <section className="bg-white rounded-xl p-8 shadow-sm border border-[#EDE7F6]">
-            <h2
-              className="text-xl font-bold text-[#1A0A2E] mb-4"
-              style={{ fontFamily: 'Montserrat, sans-serif' }}
-            >
-              Proceso de Actualización
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              La actualización de los indicadores sigue el calendario de publicación de las fuentes primarias. El equipo técnico del Observatorio verifica la disponibilidad de nuevos datos, procesa la información según los procedimientos establecidos y actualiza las visualizaciones en la plataforma.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
-              {[
-                { periodo: "Mensual", descripcion: "Indicadores de empleo y mercado laboral (ENE)" },
-                { periodo: "Trimestral", descripcion: "Indicadores de violencia y seguridad" },
-                { periodo: "Anual", descripcion: "Indicadores de educación, salud y uso del tiempo" },
-              ].map((item) => (
-                <div key={item.periodo} className="text-center p-4 bg-[#F8F6FC] rounded-lg border border-[#EDE7F6]">
-                  <div
-                    className="text-lg font-bold text-[#673AB7] mb-1"
-                    style={{ fontFamily: 'Montserrat, sans-serif' }}
-                  >
-                    {item.periodo}
-                  </div>
-                  <div className="text-xs text-gray-500 leading-relaxed">{item.descripcion}</div>
                 </div>
               ))}
             </div>
