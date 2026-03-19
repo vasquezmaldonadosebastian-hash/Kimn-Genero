@@ -172,7 +172,7 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
           </div>
 
           {/* Iframe or Placeholder */}
-          <div className="relative w-full bg-gradient-to-br from-[#F3E8F9] to-[#EDE7F6]" style={{ minHeight: "500px" }}>
+          <div className="relative w-full bg-gradient-to-br from-[#F3E8F9] to-[#E8F2FF]" style={{ minHeight: "500px" }}>
             {tieneIframe ? (
               <iframe
                 title="PreVersion"

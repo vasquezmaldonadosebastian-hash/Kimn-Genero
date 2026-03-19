@@ -1,7 +1,7 @@
 /*
  * Indicadores — Listado de 19 indicadores
  * Design: Grid de tarjetas con enlaces a cada indicador individual
- * Colors: #F5F4F8 bg, white cards, #673AB7 accents
+ * Colors: #F5F4F8 bg, white cards, #0176DE accents
  */
 
 import { useEffect, useState } from "react";
@@ -84,15 +84,15 @@ export default function Indicadores() {
   return (
     <div className="min-h-screen bg-[#F5F4F8]">
       {/* Page header */}
-      <div className="bg-white border-b border-[#EDE7F6]">
+      <div className="bg-white border-b border-[#E8F2FF]">
         <div className="container py-8">
           {/* Breadcrumb */}
           <nav className="flex items-center gap-1.5 text-xs text-gray-400 mb-4">
-            <a href="/" className="hover:text-[#673AB7] transition-colors">
+            <a href="/" className="hover:text-[#0176DE] transition-colors">
               Inicio
             </a>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-[#673AB7] font-medium">Indicadores</span>
+            <span className="text-[#0176DE] font-medium">Indicadores</span>
           </nav>
 
           <h1 className="text-3xl font-black text-[#3A1A45] mb-2" style={{ fontFamily: "Montserrat, sans-serif" }}>
@@ -116,7 +116,7 @@ export default function Indicadores() {
               placeholder="Buscar por nombre, código o descripción..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 border border-[#EDE7F6] rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#8E44AD] focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2.5 border border-[#E8F2FF] rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#8E44AD] focus:border-transparent"
             />
           </div>
 
@@ -126,7 +126,7 @@ export default function Indicadores() {
             <select
               value={filterArea}
               onChange={(e) => setFilterArea(e.target.value)}
-              className="flex-1 px-4 py-2.5 border border-[#EDE7F6] rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#8E44AD] focus:border-transparent"
+              className="flex-1 px-4 py-2.5 border border-[#E8F2FF] rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#8E44AD] focus:border-transparent"
             >
               {(areas as string[]).map((area) => (
                 <option key={area} value={area}>
@@ -152,7 +152,7 @@ export default function Indicadores() {
               return (
                 <Link key={indicador["Nro indicador"]} href={`/indicador/${indicador["Nro indicador"]}`} className="group h-full">
                     <div
-                      className="h-full bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 hover:border-[#EDE7F6]"
+                      className="h-full bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 hover:border-[#E8F2FF]"
                     >
                       {/* Header con color por área */}
                       <div
@@ -228,7 +228,7 @@ export default function Indicadores() {
             })}
           </div>
         ) : (
-          <div className="flex flex-col items-center justify-center py-16 bg-white rounded-xl border border-[#EDE7F6]">
+          <div className="flex flex-col items-center justify-center py-16 bg-white rounded-xl border border-[#E8F2FF]">
             <div className="text-5xl mb-4">🔍</div>
             <h3 className="text-lg font-bold text-gray-900 mb-2">No se encontraron indicadores</h3>
             <p className="text-gray-600 text-center max-w-md">

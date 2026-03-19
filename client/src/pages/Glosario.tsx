@@ -107,13 +107,13 @@ export default function Glosario() {
     <div className="min-h-screen bg-[#F5F4F8]">
       {/* Header */}
       <div
-        className="bg-white border-b border-[#EDE7F6]"
-        style={{ background: "linear-gradient(180deg, #F8F6FC 0%, #FFFFFF 100%)" }}
+        className="bg-white border-b border-[#E8F2FF]"
+        style={{ background: "linear-gradient(180deg, #E8F2FF 0%, #FFFFFF 100%)" }}
       >
         <div className="container py-10">
           <div className="flex items-center gap-2 mb-2">
-            <BookMarked className="w-5 h-5 text-[#673AB7]" />
-            <span className="text-xs font-semibold text-[#673AB7] uppercase tracking-wider">Referencia</span>
+            <BookMarked className="w-5 h-5 text-[#0176DE]" />
+            <span className="text-xs font-semibold text-[#0176DE] uppercase tracking-wider">Referencia</span>
           </div>
           <h1
             className="text-3xl font-bold text-[#1A0A2E] mb-3"
@@ -130,7 +130,7 @@ export default function Glosario() {
       <div className="container py-8">
         <div className="max-w-4xl mx-auto">
           {/* Search and filter */}
-          <div className="bg-white rounded-xl p-5 border border-[#EDE7F6] shadow-sm mb-6">
+          <div className="bg-white rounded-xl p-5 border border-[#E8F2FF] shadow-sm mb-6">
             <div className="flex flex-col sm:flex-row gap-3">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -139,7 +139,7 @@ export default function Glosario() {
                   placeholder="Buscar término o definición..."
                   value={busqueda}
                   onChange={(e) => setBusqueda(e.target.value)}
-                  className="w-full pl-9 pr-4 py-2.5 border border-[#EDE7F6] rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#673AB7]/30 focus:border-[#673AB7] bg-[#F8F6FC]"
+                  className="w-full pl-9 pr-4 py-2.5 border border-[#E8F2FF] rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#0176DE]/30 focus:border-[#0176DE] bg-[#E8F2FF]"
                 />
               </div>
               <div className="flex flex-wrap gap-2">
@@ -149,8 +149,8 @@ export default function Glosario() {
                     onClick={() => setCategoriaFiltro(cat)}
                     className={`px-3 py-2 rounded-lg text-xs font-medium transition-all ${
                       categoriaFiltro === cat
-                        ? "bg-[#673AB7] text-white"
-                        : "bg-[#F8F6FC] text-gray-600 hover:bg-[#EDE7F6] border border-[#EDE7F6]"
+                        ? "bg-[#0176DE] text-white"
+                        : "bg-[#E8F2FF] text-gray-600 hover:bg-[#E8F2FF] border border-[#E8F2FF]"
                     }`}
                   >
                     {cat}
@@ -168,7 +168,7 @@ export default function Glosario() {
             {terminosFiltrados.map((t) => (
               <div
                 key={t.termino}
-                className="bg-white rounded-xl p-6 border border-[#EDE7F6] shadow-sm hover:border-[#673AB7]/30 transition-colors"
+                className="bg-white rounded-xl p-6 border border-[#E8F2FF] shadow-sm hover:border-[#0176DE]/30 transition-colors"
               >
                 <div className="flex items-start justify-between gap-4 mb-2">
                   <h3
@@ -177,7 +177,7 @@ export default function Glosario() {
                   >
                     {t.termino}
                   </h3>
-                  <span className="flex-shrink-0 px-2.5 py-1 bg-[#EDE7F6] text-[#4527A0] text-xs font-semibold rounded-full">
+                  <span className="flex-shrink-0 px-2.5 py-1 bg-[#E8F2FF] text-[#03122E] text-xs font-semibold rounded-full">
                     {t.categoria}
                   </span>
                 </div>

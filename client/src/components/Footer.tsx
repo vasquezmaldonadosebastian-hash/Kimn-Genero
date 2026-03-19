@@ -15,14 +15,14 @@ export default function Footer() {
           {/* Column 1: Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-[#673AB7] flex items-center justify-center">
+              <div className="w-9 h-9 rounded-lg bg-[#0176DE] flex items-center justify-center">
                 <BarChart3 className="w-5 h-5 text-white" />
               </div>
               <div className="leading-tight">
                 <div className="font-bold text-white text-sm tracking-wide" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   OBSERVATORIO
                 </div>
-                <div className="text-xs text-[#CE93D8] font-medium tracking-wider uppercase" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                <div className="text-xs text-[#FEC60D] font-medium tracking-wider uppercase" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   Indicadores de Género
                 </div>
               </div>
@@ -54,9 +54,9 @@ export default function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-gray-300 hover:text-[#CE93D8] transition-colors flex items-center gap-1.5"
+                    className="text-sm text-gray-300 hover:text-[#FEC60D] transition-colors flex items-center gap-1.5"
                   >
-                    <span className="w-1 h-1 rounded-full bg-[#673AB7] inline-block" />
+                    <span className="w-1 h-1 rounded-full bg-[#0176DE] inline-block" />
                     {link.label}
                   </a>
                 </li>
@@ -75,7 +75,7 @@ export default function Footer() {
                 <li key={label}>
                   <a
                     href="#"
-                    className="text-sm text-gray-300 hover:text-[#CE93D8] transition-colors flex items-center gap-1.5"
+                    className="text-sm text-gray-300 hover:text-[#FEC60D] transition-colors flex items-center gap-1.5"
                   >
                     <ExternalLink className="w-3 h-3" />
                     {label}
@@ -92,23 +92,23 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-[#CE93D8] mt-0.5 flex-shrink-0" />
+                <Mail className="w-4 h-4 text-[#FEC60D] mt-0.5 flex-shrink-0" />
                 <div>
                   <div className="text-xs text-gray-400 mb-0.5">Consultas sobre datos</div>
-                  <a href="mailto:observatorio@uct.cl" className="text-sm text-gray-200 hover:text-[#CE93D8] transition-colors">
+                  <a href="mailto:observatorio@uct.cl" className="text-sm text-gray-200 hover:text-[#FEC60D] transition-colors">
                     observatorio@uct.cl
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-[#CE93D8] mt-0.5 flex-shrink-0" />
+                <Phone className="w-4 h-4 text-[#FEC60D] mt-0.5 flex-shrink-0" />
                 <div>
                   <div className="text-xs text-gray-400 mb-0.5">Teléfono</div>
                   <span className="text-sm text-gray-200">+56 2 XXXX XXXX</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#CE93D8] mt-0.5 flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-[#FEC60D] mt-0.5 flex-shrink-0" />
                 <div>
                   <div className="text-xs text-gray-400 mb-0.5">Dirección</div>
                   <span className="text-sm text-gray-200">Av. Caupolicán 1296, Temuco, Chile</span>

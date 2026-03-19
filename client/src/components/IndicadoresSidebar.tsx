@@ -1,7 +1,7 @@
 /*
  * IndicadoresSidebar — Observatorio de Indicadores de Género
  * Design: Dark purple sidebar, collapsible category groups, active state highlight
- * Colors: #1A0A2E bg, #673AB7 active, white text
+ * Colors: #1A0A2E bg, #0176DE active, white text
  */
 
 import { useState } from "react";
@@ -43,7 +43,7 @@ export default function IndicadoresSidebar({
         {/* Sidebar header */}
         <div className="px-4 py-4 border-b border-white/10">
           <h3
-            className="text-xs font-bold text-[#CE93D8] uppercase tracking-widest"
+            className="text-xs font-bold text-[#FEC60D] uppercase tracking-widest"
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
             Dimensiones

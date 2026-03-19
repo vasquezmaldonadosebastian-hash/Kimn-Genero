@@ -1,7 +1,7 @@
 /*
  * Home — Observatorio de Indicadores de Género
  * Design: Hero con gradiente morado + imagen, KPIs animados, sección de dimensiones
- * Colors: #673AB7 primary, #1A0A2E dark, #F5F4F8 bg
+ * Colors: #0176DE primary, #1A0A2E dark, #F5F4F8 bg
  */
 
 import React, { useEffect, useRef, useState } from "react";
@@ -86,7 +86,7 @@ export default function Home() {
       <section
         className="relative overflow-hidden"
         style={{
-          background: "linear-gradient(135deg, #1A0A2E 0%, #4527A0 40%, #673AB7 100%)",
+          background: "linear-gradient(135deg, #1A0A2E 0%, #03122E 40%, #0176DE 100%)",
           minHeight: "55vh",
         }}
       >
@@ -129,7 +129,7 @@ export default function Home() {
             >
               Sistema de Indicadores
               <br />
-              <span className="text-[#CE93D8]">de Género</span>
+              <span className="text-[#FEC60D]">de Género</span>
             </h1>
 
             {/* Subtitle */}
@@ -146,7 +146,7 @@ export default function Home() {
               style={{ animationFillMode: "forwards" }}
             >
               <Link href="/indicadores">
-                <span className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#4527A0] font-semibold rounded-lg hover:bg-[#EDE7F6] transition-colors shadow-lg text-sm">
+                <span className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#03122E] font-semibold rounded-lg hover:bg-[#E8F2FF] transition-colors shadow-lg text-sm">
                   Explorar Indicadores
                   <ArrowRight className="w-4 h-4" />
                 </span>
@@ -182,7 +182,7 @@ export default function Home() {
       <section className="container pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#EDE7F6] text-[#4527A0] rounded-full text-xs font-semibold mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#E8F2FF] text-[#03122E] rounded-full text-xs font-semibold mb-4">
               <Users className="w-3.5 h-3.5" />
               Acerca del Observatorio
             </div>

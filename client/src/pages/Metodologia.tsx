@@ -7,22 +7,22 @@ import { BookOpen, Target, Database, RefreshCw, CheckCircle2, Layers, Zap, Users
 
 const principios = [
   {
-    icono: <Target className="w-5 h-5 text-[#673AB7]" />,
+    icono: <Target className="w-5 h-5 text-[#0176DE]" />,
     titulo: "Pertinencia",
     descripcion: "Los indicadores responden a necesidades concretas de información para el diseño y evaluación de políticas públicas con enfoque de género.",
   },
   {
-    icono: <CheckCircle2 className="w-5 h-5 text-[#673AB7]" />,
+    icono: <CheckCircle2 className="w-5 h-5 text-[#0176DE]" />,
     titulo: "Confiabilidad",
     descripcion: "Los datos provienen de fuentes oficiales, encuestas estadísticas con diseño probabilístico y registros administrativos validados.",
   },
   {
-    icono: <Database className="w-5 h-5 text-[#673AB7]" />,
+    icono: <Database className="w-5 h-5 text-[#0176DE]" />,
     titulo: "Desagregación",
     descripcion: "Todos los indicadores se presentan desagregados por sexo como mínimo, con desagregaciones adicionales por edad, región y nivel socioeconómico.",
   },
   {
-    icono: <RefreshCw className="w-5 h-5 text-[#673AB7]" />,
+    icono: <RefreshCw className="w-5 h-5 text-[#0176DE]" />,
     titulo: "Actualización periódica",
     descripcion: "Los indicadores se actualizan con la periodicidad de sus fuentes primarias, garantizando información reciente.",
   },
@@ -53,19 +53,19 @@ const estandares = [
   {
     nivel: "Fortalecer",
     descripcion: "Capacidades personales y colectivas en perspectiva de género",
-    color: "bg-[#E8D5F2]",
-    textColor: "text-[#5E2750]",
+    color: "bg-[#E8F2FF]",
+    textColor: "text-[#0176DE]",
   },
   {
     nivel: "Consolidar",
     descripcion: "Institucionalización con garantías de sostenibilidad",
-    color: "bg-[#D1B3E0]",
-    textColor: "text-[#3A1A45]",
+    color: "bg-[#B3D9FF]",
+    textColor: "text-[#03122E]",
   },
   {
     nivel: "Transformar",
     descripcion: "Cambio sistémico y transformación de cultura organizacional",
-    color: "bg-[#8E44AD]",
+    color: "bg-[#0176DE]",
     textColor: "text-white",
   },
 ];
@@ -113,16 +113,16 @@ const fases = [
 
 export default function Metodologia() {
   return (
-    <div className="min-h-screen bg-[#F5F4F8]">
+    <div className="min-h-screen bg-[#F9F9FB]">
       {/* Header */}
       <div
-        className="bg-white border-b border-[#EDE7F6]"
-        style={{ background: "linear-gradient(180deg, #F8F6FC 0%, #FFFFFF 100%)" }}
+        className="bg-white border-b border-[#E8F2FF]"
+        style={{ background: "linear-gradient(180deg, #E8F2FF 0%, #FFFFFF 100%)" }}
       >
         <div className="container py-10">
           <div className="flex items-center gap-2 mb-2">
-            <BookOpen className="w-5 h-5 text-[#673AB7]" />
-            <span className="text-xs font-semibold text-[#673AB7] uppercase tracking-wider">Documentación</span>
+            <BookOpen className="w-5 h-5 text-[#0176DE]" />
+            <span className="text-xs font-semibold text-[#0176DE] uppercase tracking-wider">Documentación</span>
           </div>
           <h1
             className="text-3xl font-bold text-[#1A0A2E] mb-3"
@@ -140,7 +140,7 @@ export default function Metodologia() {
         <div className="max-w-4xl mx-auto space-y-10">
 
           {/* 1. Definición del Modelo */}
-          <section className="bg-white rounded-xl p-8 shadow-sm border border-[#EDE7F6]">
+          <section className="bg-white rounded-xl p-8 shadow-sm border border-[#E8F2FF]">
             <h2
               className="text-xl font-bold text-[#1A0A2E] mb-4"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
@@ -156,7 +156,7 @@ export default function Metodologia() {
           </section>
 
           {/* 2. Estado del Arte */}
-          <section className="bg-white rounded-xl p-8 shadow-sm border border-[#EDE7F6]">
+          <section className="bg-white rounded-xl p-8 shadow-sm border border-[#E8F2FF]">
             <h2
               className="text-xl font-bold text-[#1A0A2E] mb-6"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
@@ -192,7 +192,7 @@ export default function Metodologia() {
           </section>
 
           {/* 3. Metodología de Implementación */}
-          <section className="bg-white rounded-xl p-8 shadow-sm border border-[#EDE7F6]">
+          <section className="bg-white rounded-xl p-8 shadow-sm border border-[#E8F2FF]">
             <h2
               className="text-xl font-bold text-[#1A0A2E] mb-6"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
@@ -206,9 +206,9 @@ export default function Metodologia() {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {etapas.map((etapa) => (
-                  <div key={etapa.numero} className="bg-[#F8F6FC] rounded-lg p-5 border border-[#EDE7F6]">
+                  <div key={etapa.numero} className="bg-[#E8F2FF] rounded-lg p-5 border border-[#E8F2FF]">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-8 h-8 rounded-full bg-[#673AB7] text-white flex items-center justify-center text-sm font-bold">
+                      <div className="w-8 h-8 rounded-full bg-[#0176DE] text-white flex items-center justify-center text-sm font-bold">
                         {etapa.numero}
                       </div>
                       <h4 className="font-semibold text-[#1A0A2E]" style={{ fontFamily: 'Montserrat, sans-serif' }}>
@@ -230,7 +230,7 @@ export default function Metodologia() {
               </p>
               <div className="space-y-3">
                 {estandares.map((est) => (
-                  <div key={est.nivel} className={`${est.color} rounded-lg p-4 border border-[#EDE7F6]`}>
+                  <div key={est.nivel} className={`${est.color} rounded-lg p-4 border border-[#E8F2FF]`}>
                     <div className={`font-semibold ${est.textColor} mb-1`} style={{ fontFamily: 'Montserrat, sans-serif' }}>
                       {est.nivel}
                     </div>
@@ -249,7 +249,7 @@ export default function Metodologia() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {ambitos.map((ambito) => (
-                  <div key={ambito.titulo} className="bg-[#F8F6FC] rounded-lg p-5 border border-[#EDE7F6]">
+                  <div key={ambito.titulo} className="bg-[#E8F2FF] rounded-lg p-5 border border-[#E8F2FF]">
                     <div className="text-2xl mb-2">{ambito.icono}</div>
                     <h4 className="font-semibold text-[#1A0A2E] mb-2 text-sm" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                       {ambito.titulo}
@@ -262,7 +262,7 @@ export default function Metodologia() {
           </section>
 
           {/* 4. Plan de Trabajo */}
-          <section className="bg-white rounded-xl p-8 shadow-sm border border-[#EDE7F6]">
+          <section className="bg-white rounded-xl p-8 shadow-sm border border-[#E8F2FF]">
             <h2
               className="text-xl font-bold text-[#1A0A2E] mb-6"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
@@ -278,11 +278,11 @@ export default function Metodologia() {
                 Se definieron <strong>8 dimensiones clave</strong> operacionalizadas mediante <strong>19 indicadores estratégicos</strong> que permiten monitorear el avance en la transversalización de la perspectiva de género:
               </p>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex gap-3"><span className="text-[#673AB7] font-bold">•</span> <span><strong>Institucionalización:</strong> Normativas y políticas con perspectiva de género</span></li>
-                <li className="flex gap-3"><span className="text-[#673AB7] font-bold">•</span> <span><strong>Violencia de Género:</strong> Conocimiento y cumplimiento de protocolos</span></li>
-                <li className="flex gap-3"><span className="text-[#673AB7] font-bold">•</span> <span><strong>Corresponsabilidad:</strong> Conciliación vida laboral y familiar</span></li>
-                <li className="flex gap-3"><span className="text-[#673AB7] font-bold">•</span> <span><strong>Trayectorias Laborales:</strong> Participación y cargos directivos</span></li>
-                <li className="flex gap-3"><span className="text-[#673AB7] font-bold">•</span> <span>Y otras dimensiones de análisis estratégico</span></li>
+                <li className="flex gap-3"><span className="text-[#0176DE] font-bold">•</span> <span><strong>Institucionalización:</strong> Normativas y políticas con perspectiva de género</span></li>
+                <li className="flex gap-3"><span className="text-[#0176DE] font-bold">•</span> <span><strong>Violencia de Género:</strong> Conocimiento y cumplimiento de protocolos</span></li>
+                <li className="flex gap-3"><span className="text-[#0176DE] font-bold">•</span> <span><strong>Corresponsabilidad:</strong> Conciliación vida laboral y familiar</span></li>
+                <li className="flex gap-3"><span className="text-[#0176DE] font-bold">•</span> <span><strong>Trayectorias Laborales:</strong> Participación y cargos directivos</span></li>
+                <li className="flex gap-3"><span className="text-[#0176DE] font-bold">•</span> <span>Y otras dimensiones de análisis estratégico</span></li>
               </ul>
             </div>
 
@@ -292,9 +292,9 @@ export default function Metodologia() {
               </h3>
               <div className="space-y-3">
                 {fases.map((fase) => (
-                  <div key={fase.numero} className="bg-[#F8F6FC] rounded-lg p-5 border border-[#EDE7F6]">
+                  <div key={fase.numero} className="bg-[#E8F2FF] rounded-lg p-5 border border-[#E8F2FF]">
                     <div className="flex items-start gap-4">
-                      <div className="w-8 h-8 rounded-full bg-[#673AB7] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
+                      <div className="w-8 h-8 rounded-full bg-[#0176DE] text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
                         {fase.numero}
                       </div>
                       <div>
@@ -320,9 +320,9 @@ export default function Metodologia() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {principios.map((p) => (
-                <div key={p.titulo} className="bg-white rounded-xl p-6 border border-[#EDE7F6] shadow-sm">
+                <div key={p.titulo} className="bg-white rounded-xl p-6 border border-[#E8F2FF] shadow-sm">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-lg bg-[#EDE7F6] flex items-center justify-center">
+                    <div className="w-9 h-9 rounded-lg bg-[#E8F2FF] flex items-center justify-center">
                       {p.icono}
                     </div>
                     <h3
@@ -341,8 +341,8 @@ export default function Metodologia() {
           {/* Disclaimer */}
           <div className="bg-[#1A0A2E] rounded-xl p-6 text-white">
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-full bg-[#673AB7]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <span className="text-[#CE93D8] text-sm font-bold">i</span>
+              <div className="w-8 h-8 rounded-full bg-[#0176DE]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="text-[#FEC60D] text-sm font-bold">i</span>
               </div>
               <div>
                 <h3
