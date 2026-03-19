@@ -1,7 +1,7 @@
 /*
  * OBSERVATORIO DE INDICADORES DE GÉNERO
  * Design System: "Observatorio Moderno con Sidebar Dinámica"
- * Color Philosophy: Deep Purple (#673AB7) como identidad de género institucional
+ * Color Philosophy: Blue UCT (#0176DE) como identidad institucional de la Universidad Católica de Temuco
  * Typography: Montserrat (display/KPIs) + Inter (body)
  * Layout: Header sticky + Hero gradient + Sidebar 260px + Main content area
  */
@@ -49,53 +49,53 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Custom brand colors */
-  --color-brand-primary: #673AB7;
-  --color-brand-dark: #4527A0;
-  --color-brand-light: #9C6FD6;
-  --color-brand-pale: #EDE7F6;
-  --color-brand-accent: #CE93D8;
+  /* Custom brand colors - UCT Official Palette */
+  --color-brand-primary: #0176DE;
+  --color-brand-dark: #03122E;
+  --color-brand-light: #173F8A;
+  --color-brand-pale: #E8F2FF;
+  --color-brand-accent: #FEC60D;
 }
 
 :root {
   --radius: 0.5rem;
 
-  /* Brand purple palette */
-  --primary: oklch(0.42 0.18 290);
+  /* Brand blue palette - UCT */
+  --primary: oklch(0.48 0.22 260);
   --primary-foreground: oklch(0.98 0 0);
 
   /* Backgrounds */
-  --background: oklch(0.975 0.005 290);
-  --foreground: oklch(0.18 0.02 290);
+  --background: oklch(0.975 0.005 260);
+  --foreground: oklch(0.15 0.02 260);
 
   /* Cards */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.02 290);
+  --card-foreground: oklch(0.15 0.02 260);
 
   /* Popover */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.02 290);
+  --popover-foreground: oklch(0.15 0.02 260);
 
   /* Secondary */
-  --secondary: oklch(0.94 0.015 290);
-  --secondary-foreground: oklch(0.35 0.1 290);
+  --secondary: oklch(0.94 0.015 260);
+  --secondary-foreground: oklch(0.35 0.1 260);
 
   /* Muted */
-  --muted: oklch(0.95 0.008 290);
-  --muted-foreground: oklch(0.52 0.04 290);
+  --muted: oklch(0.95 0.008 260);
+  --muted-foreground: oklch(0.52 0.04 260);
 
   /* Accent */
-  --accent: oklch(0.92 0.03 290);
-  --accent-foreground: oklch(0.3 0.15 290);
+  --accent: oklch(0.92 0.03 260);
+  --accent-foreground: oklch(0.3 0.15 260);
 
   /* Destructive */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
 
   /* Border & Input */
-  --border: oklch(0.88 0.015 290);
-  --input: oklch(0.88 0.015 290);
-  --ring: oklch(0.42 0.18 290);
+  --border: oklch(0.88 0.015 260);
+  --input: oklch(0.88 0.015 260);
+  --ring: oklch(0.48 0.22 260);
 
   /* Charts */
   --chart-1: oklch(0.42 0.18 290);

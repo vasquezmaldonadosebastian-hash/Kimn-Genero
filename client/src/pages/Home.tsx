@@ -62,7 +62,7 @@ function KpiCard({ kpi, delay }: { kpi: typeof kpisDestacados[0]; delay: number 
     >
       <div className="flex items-start justify-between mb-1">
         <div
-          className="text-3xl font-extrabold text-[#4527A0]"
+          className="text-3xl font-extrabold text-[#0176DE]"
           style={{ fontFamily: 'Montserrat, sans-serif' }}
         >
           {display}
@@ -198,11 +198,11 @@ export default function Home() {
             <p className="text-gray-600 leading-relaxed mb-6">
               Los indicadores se producen a partir de fuentes oficiales y son actualizados periódicamente para reflejar la situación actual de las brechas de género en el país.
             </p>
-            <blockquote className="border-l-4 border-[#673AB7] pl-4 py-2 bg-[#F8F6FC] rounded-r-lg">
+            <blockquote className="border-l-4 border-[#0176DE] pl-4 py-2 bg-[#E8F2FF] rounded-r-lg">
               <p className="text-sm text-gray-700 italic leading-relaxed">
                 "Un indicador de género es una medida que señala el estado o nivel de las diferencias entre hombres y mujeres en un momento del tiempo, expresando en particular las desigualdades que resultan de la diferencia sexual o de género."
               </p>
-              <cite className="text-xs text-[#673AB7] font-medium mt-2 block">— INE, 2019</cite>
+              <cite className="text-xs text-[#0176DE] font-medium mt-2 block">— INE, 2019</cite>
             </blockquote>
           </div>
 
@@ -211,12 +211,12 @@ export default function Home() {
             {categorias.slice(0, 6).map((cat, i) => (
               <Link key={cat.id} href={`/indicadores?cat=${cat.id}`}>
                 <div
-                  className="bg-white rounded-xl p-4 border border-[#EDE7F6] hover:border-[#673AB7] hover:shadow-md transition-all duration-200 cursor-pointer group opacity-0 animate-slide-up"
+                  className="bg-white rounded-xl p-4 border border-[#E8F2FF] hover:border-[#0176DE] hover:shadow-md transition-all duration-200 cursor-pointer group opacity-0 animate-slide-up"
                   style={{ animationDelay: `${i * 80}ms`, animationFillMode: "forwards" }}
                 >
                   <div className="text-2xl mb-2">{cat.icono}</div>
                   <div
-                    className="text-sm font-semibold text-[#1A0A2E] group-hover:text-[#673AB7] transition-colors leading-tight"
+                    className="text-sm font-semibold text-[#03122E] group-hover:text-[#0176DE] transition-colors leading-tight"
                     style={{ fontFamily: 'Montserrat, sans-serif' }}
                   >
                     {cat.label}
@@ -235,7 +235,7 @@ export default function Home() {
       <section className="container pb-16">
         <div
           className="rounded-2xl p-8 lg:p-12 text-white relative overflow-hidden"
-          style={{ background: "linear-gradient(135deg, #4527A0 0%, #673AB7 100%)" }}
+          style={{ background: "linear-gradient(135deg, #0176DE 0%, #173F8A 100%)" }}
         >
           <div className="absolute inset-0 opacity-10">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
@@ -250,8 +250,8 @@ export default function Home() {
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <Shield className="w-5 h-5 text-[#CE93D8]" />
-                <span className="text-[#CE93D8] text-sm font-semibold uppercase tracking-wider">Datos abiertos</span>
+                <Shield className="w-5 h-5 text-[#FEC60D]" />
+                <span className="text-[#FEC60D] text-sm font-semibold uppercase tracking-wider">Datos abiertos</span>
               </div>
               <h3
                 className="text-2xl lg:text-3xl font-bold mb-2"
@@ -264,7 +264,7 @@ export default function Home() {
               </p>
             </div>
             <Link href="/indicadores">
-              <span className="flex-shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-white text-[#4527A0] font-bold rounded-xl hover:bg-[#EDE7F6] transition-colors shadow-xl text-sm">
+              <span className="flex-shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-white text-[#0176DE] font-bold rounded-xl hover:bg-[#E8F2FF] transition-colors shadow-xl text-sm">
                 Ir a Indicadores
                 <ArrowRight className="w-4 h-4" />
               </span>
