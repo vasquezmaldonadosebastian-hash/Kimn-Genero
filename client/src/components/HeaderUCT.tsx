@@ -22,7 +22,7 @@ export default function HeaderUCT() {
 
   const mainNavLinks = [
     { label: "Inicio", href: "/" },
-    { label: "Modelo", href: "/metodologia" },
+    { label: "Sobre el Modelo", href: "/metodologia" },
     { label: "Política de Género", href: "#" },
     { label: "Indicadores", href: "/indicadores" },
     { label: "Glosario", href: "/glosario" },
@@ -79,10 +79,10 @@ export default function HeaderUCT() {
                 </div>
                 <div className="hidden sm:block">
                   <div className="text-sm font-bold text-[#03122E]" style={{ fontFamily: "Montserrat, sans-serif" }}>
-                    OBSERVATORIO
+                    KIMN
                   </div>
                   <div className="text-xs text-[#0176DE] font-semibold">
-                    INDICADORES DE GÉNERO
+                    GÉNERO
                   </div>
                 </div>
               </div>
