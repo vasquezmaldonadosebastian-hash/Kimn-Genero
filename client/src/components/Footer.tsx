@@ -1,48 +1,44 @@
 /*
  * Footer — Observatorio de Indicadores de Género
- * Design: Dark purple background, three-column layout
- * Columns: About | Links | Contact
+ * Design: Dark navy footer (UCT institutional), 3 columns + bottom bar
+ * Colors: #03122E bg, #0176DE accents, white text
  */
 
-import { BarChart3, Mail, Phone, MapPin, ExternalLink } from "lucide-react";
+import { Link } from "wouter";
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-[#1A0A2E] text-white">
-      {/* Main footer */}
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Column 1: Brand */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-[#0176DE] flex items-center justify-center">
-                <BarChart3 className="w-5 h-5 text-white" />
+    <footer className="bg-[#03122E] text-white pt-12 pb-6">
+      <div className="container">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+          {/* Column 1: Brand & Logo */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 flex items-center justify-center brightness-0 invert">
+                <img src="/logo-uct.png" alt="Logo UCT" className="w-full h-full object-contain" />
               </div>
-              <div className="leading-tight">
-                <div className="font-bold text-white text-sm tracking-wide" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+              <div>
+                <div className="font-bold text-sm tracking-wide" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   OBSERVATORIO
                 </div>
-                <div className="text-xs text-[#FEC60D] font-medium tracking-wider uppercase" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+                <div className="text-xs text-[#0176DE] font-medium tracking-wider uppercase" style={{ fontFamily: 'Montserrat, sans-serif' }}>
                   Indicadores de Género
                 </div>
               </div>
             </div>
-            <p className="text-sm text-gray-300 leading-relaxed mb-5">
-              Plataforma institucional de visualización de indicadores de género. Datos desagregados para el análisis de brechas, participación y equidad.
+            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+              Plataforma institucional de la Universidad Católica de Temuco para el monitoreo y análisis de brechas de género.
             </p>
-            {/* Partner logos placeholder */}
-            <div className="flex flex-wrap gap-3">
-              <div className="h-8 px-3 bg-white/10 rounded flex items-center text-xs text-gray-300 font-medium">
-                Universidad Católica de Temuco
-              </div>
-            </div>
           </div>
 
-          {/* Column 2: Links */}
+          {/* Column 2: Quick Links */}
           <div>
-            <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+            <h4 className="font-bold text-sm uppercase tracking-widest mb-5 text-[#0176DE]" style={{ fontFamily: 'Montserrat, sans-serif' }}>
               Navegación
-            </h3>
+            </h4>
             <ul className="space-y-2.5">
               {[
                 { label: "Inicio", href: "/" },
@@ -52,88 +48,53 @@ export default function Footer() {
                 { label: "Contacto", href: "/contacto" },
               ].map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-gray-300 hover:text-[#FEC60D] transition-colors flex items-center gap-1.5"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-[#0176DE] inline-block" />
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-
-            <h3 className="font-semibold text-white mt-6 mb-4 text-sm uppercase tracking-wider" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-              Legal
-            </h3>
-            <ul className="space-y-2.5">
-              {[
-                "Política de Privacidad",
-                "Términos de Uso",
-                "Accesibilidad",
-              ].map((label) => (
-                <li key={label}>
-                  <a
-                    href="#"
-                    className="text-sm text-gray-300 hover:text-[#FEC60D] transition-colors flex items-center gap-1.5"
-                  >
-                    <ExternalLink className="w-3 h-3" />
-                    {label}
-                  </a>
+                  <Link href={link.href}>
+                    <span className="text-gray-400 hover:text-white text-sm transition-colors cursor-pointer flex items-center gap-2 group">
+                      <span className="w-1 h-1 rounded-full bg-[#0176DE] opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {link.label}
+                    </span>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 3: Contact */}
+          {/* Column 3: Contact Info */}
           <div>
-            <h3 className="font-semibold text-white mb-4 text-sm uppercase tracking-wider" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+            <h4 className="font-bold text-sm uppercase tracking-widest mb-5 text-[#0176DE]" style={{ fontFamily: 'Montserrat, sans-serif' }}>
               Contacto
-            </h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-[#FEC60D] mt-0.5 flex-shrink-0" />
-                <div>
-                  <div className="text-xs text-gray-400 mb-0.5">Consultas sobre datos</div>
-                  <a href="mailto:observatorio@uct.cl" className="text-sm text-gray-200 hover:text-[#FEC60D] transition-colors">
-                    observatorio@uct.cl
-                  </a>
-                </div>
+            </h4>
+            <ul className="space-y-3.5">
+              <li className="flex items-start gap-3 text-sm text-gray-400">
+                <MapPin className="w-4 h-4 text-[#0176DE] flex-shrink-0 mt-0.5" />
+                <span>Av. Alemania 0422, Temuco, Chile</span>
               </li>
-              <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-[#FEC60D] mt-0.5 flex-shrink-0" />
-                <div>
-                  <div className="text-xs text-gray-400 mb-0.5">Teléfono</div>
-                  <span className="text-sm text-gray-200">+56 2 XXXX XXXX</span>
-                </div>
+              <li className="flex items-center gap-3 text-sm text-gray-400">
+                <Phone className="w-4 h-4 text-[#0176DE] flex-shrink-0" />
+                <span>+56 45 220 5200</span>
               </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#FEC60D] mt-0.5 flex-shrink-0" />
-                <div>
-                  <div className="text-xs text-gray-400 mb-0.5">Dirección</div>
-                  <span className="text-sm text-gray-200">Av. Caupolicán 1296, Temuco, Chile</span>
-                </div>
+              <li className="flex items-center gap-3 text-sm text-gray-400">
+                <Mail className="w-4 h-4 text-[#0176DE] flex-shrink-0" />
+                <a href="mailto:observatorio@uct.cl" className="hover:text-white transition-colors">observatorio@uct.cl</a>
               </li>
             </ul>
-
-            <div className="mt-6 p-4 bg-white/5 rounded-lg border border-white/10">
-              <p className="text-xs text-gray-400 leading-relaxed">
-                La calidad de las cifras presentadas es de exclusiva responsabilidad de la Universidad Católica de Temuco como institución productora del indicador.
-              </p>
-            </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-white/10">
-        <div className="container py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-gray-400">
-            © {new Date().getFullYear()} Observatorio de Indicadores de Género. Todos los derechos reservados.
-          </p>
-          <p className="text-xs text-gray-500">
-            Datos actualizados periódicamente · Fuentes: registros institucionales y encuestas oficiales
-          </p>
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-xs text-gray-500">
+            © {currentYear} Universidad Católica de Temuco. Todos los derechos reservados.
+          </div>
+          <div className="flex items-center gap-6">
+            <a href="https://uct.cl" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-500 hover:text-white transition-colors flex items-center gap-1.5">
+              Sitio Institucional
+              <ExternalLink className="w-3 h-3" />
+            </a>
+            <a href="#" className="text-xs text-gray-500 hover:text-white transition-colors">
+              Política de Privacidad
+            </a>
+          </div>
         </div>
       </div>
     </footer>

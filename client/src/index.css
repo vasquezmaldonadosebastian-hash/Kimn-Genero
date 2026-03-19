@@ -61,58 +61,58 @@
   --radius: 0.5rem;
 
   /* Brand blue palette - UCT */
-  --primary: oklch(0.48 0.22 260);
+  --primary: oklch(0.55 0.2 250); /* #0176DE */
   --primary-foreground: oklch(0.98 0 0);
 
   /* Backgrounds */
-  --background: oklch(0.975 0.005 260);
-  --foreground: oklch(0.15 0.02 260);
+  --background: oklch(0.98 0.01 250);
+  --foreground: oklch(0.15 0.05 260);
 
   /* Cards */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.02 260);
+  --card-foreground: oklch(0.15 0.05 260);
 
   /* Popover */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.02 260);
+  --popover-foreground: oklch(0.15 0.05 260);
 
   /* Secondary */
-  --secondary: oklch(0.94 0.015 260);
-  --secondary-foreground: oklch(0.35 0.1 260);
+  --secondary: oklch(0.92 0.03 250);
+  --secondary-foreground: oklch(0.35 0.15 260);
 
   /* Muted */
-  --muted: oklch(0.95 0.008 260);
-  --muted-foreground: oklch(0.52 0.04 260);
+  --muted: oklch(0.95 0.01 250);
+  --muted-foreground: oklch(0.45 0.05 260);
 
   /* Accent */
-  --accent: oklch(0.92 0.03 260);
-  --accent-foreground: oklch(0.3 0.15 260);
+  --accent: oklch(0.85 0.2 85); /* #FEC60D */
+  --accent-foreground: oklch(0.15 0.05 260);
 
   /* Destructive */
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
 
   /* Border & Input */
-  --border: oklch(0.88 0.015 260);
-  --input: oklch(0.88 0.015 260);
-  --ring: oklch(0.48 0.22 260);
+  --border: oklch(0.88 0.02 250);
+  --input: oklch(0.88 0.02 250);
+  --ring: oklch(0.55 0.2 250);
 
   /* Charts */
-  --chart-1: oklch(0.42 0.18 290);
-  --chart-2: oklch(0.55 0.15 290);
-  --chart-3: oklch(0.65 0.12 290);
-  --chart-4: oklch(0.75 0.08 290);
-  --chart-5: oklch(0.85 0.05 290);
+  --chart-1: oklch(0.55 0.2 250);
+  --chart-2: oklch(0.35 0.15 260);
+  --chart-3: oklch(0.85 0.2 85);
+  --chart-4: oklch(0.65 0.12 250);
+  --chart-5: oklch(0.75 0.08 250);
 
   /* Sidebar */
-  --sidebar: oklch(0.22 0.08 290);
-  --sidebar-foreground: oklch(0.95 0.01 290);
-  --sidebar-primary: oklch(0.42 0.18 290);
+  --sidebar: oklch(0.15 0.05 260); /* #03122E */
+  --sidebar-foreground: oklch(0.95 0.01 250);
+  --sidebar-primary: oklch(0.55 0.2 250);
   --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.3 0.1 290);
-  --sidebar-accent-foreground: oklch(0.95 0.01 290);
-  --sidebar-border: oklch(0.32 0.08 290);
-  --sidebar-ring: oklch(0.42 0.18 290);
+  --sidebar-accent: oklch(0.35 0.15 260);
+  --sidebar-accent-foreground: oklch(0.95 0.01 250);
+  --sidebar-border: oklch(0.35 0.15 260);
+  --sidebar-ring: oklch(0.55 0.2 250);
 }
 
 @layer base {
@@ -174,9 +174,9 @@
     width: 100%;
     background: white;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 6px -1px rgba(103, 58, 183, 0.08),
-                0 10px 30px -5px rgba(103, 58, 183, 0.12),
-                0 0 0 1px rgba(103, 58, 183, 0.06);
+    box-shadow: 0 4px 6px -1px rgba(1, 118, 222, 0.08),
+                0 10px 30px -5px rgba(1, 118, 222, 0.12),
+                0 0 0 1px rgba(1, 118, 222, 0.06);
     overflow: hidden;
   }
 
@@ -195,23 +195,23 @@
     border-radius: 0.375rem;
     font-size: 0.875rem;
     font-weight: 500;
-    color: oklch(0.85 0.02 290);
+    color: oklch(0.85 0.02 250);
     transition: all 0.15s ease;
     cursor: pointer;
     border-left: 3px solid transparent;
   }
 
   .sidebar-item:hover {
-    background: oklch(0.3 0.1 290);
+    background: oklch(0.35 0.15 260);
     color: white;
-    border-left-color: oklch(0.65 0.12 290);
+    border-left-color: oklch(0.55 0.2 250);
     transform: translateX(2px);
   }
 
   .sidebar-item.active {
-    background: oklch(0.42 0.18 290);
+    background: oklch(0.55 0.2 250);
     color: white;
-    border-left-color: oklch(0.75 0.08 290);
+    border-left-color: oklch(0.85 0.2 85);
     font-weight: 600;
   }
 
@@ -220,21 +220,21 @@
     background: white;
     border-radius: 0.75rem;
     padding: 1.25rem 1.5rem;
-    border-left: 4px solid #673AB7;
-    box-shadow: 0 2px 8px rgba(103, 58, 183, 0.08);
+    border-left: 4px solid #0176DE;
+    box-shadow: 0 2px 8px rgba(1, 118, 222, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
   .kpi-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(103, 58, 183, 0.15);
+    box-shadow: 0 6px 20px rgba(1, 118, 222, 0.15);
   }
 
   /* Accordion metodología */
   .metodologia-accordion {
     background: white;
     border-radius: 0.75rem;
-    border: 1px solid oklch(0.88 0.015 290);
+    border: 1px solid oklch(0.88 0.02 250);
     overflow: hidden;
     margin-top: 1rem;
   }

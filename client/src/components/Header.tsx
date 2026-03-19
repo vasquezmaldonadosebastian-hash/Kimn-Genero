@@ -1,12 +1,12 @@
 /*
  * Header — Observatorio de Indicadores de Género
  * Design: Sticky header, 64px height, logo left + nav right
- * Colors: White bg with bottom border, primary purple for active/hover
+ * Colors: White bg with bottom border, primary UCT blue for active/hover
  */
 
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, BarChart3 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Inicio", href: "/" },
@@ -21,14 +21,14 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-[oklch(0.88_0.015_290)] shadow-sm">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <div className="container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center gap-3 group">
-              <div className="w-9 h-9 rounded-lg bg-[#0176DE] flex items-center justify-center shadow-sm group-hover:bg-[#03122E] transition-colors">
-                <BarChart3 className="w-5 h-5 text-white" />
+            <div className="flex items-center gap-3 group cursor-pointer">
+              <div className="w-10 h-10 flex items-center justify-center transition-transform group-hover:scale-105">
+                <img src="/logo-uct.png" alt="Logo UCT" className="w-full h-full object-contain" />
               </div>
               <div className="leading-tight">
                 <div className="font-bold text-[#03122E] text-sm tracking-wide" style={{ fontFamily: 'Montserrat, sans-serif' }}>
@@ -48,7 +48,7 @@ export default function Header() {
               return (
                 <Link key={item.href} href={item.href}>
                   <span
-                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-150 ${
+                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-150 cursor-pointer ${
                       isActive
                         ? "bg-[#E8F2FF] text-[#03122E] font-semibold"
                         : "text-gray-600 hover:bg-[#F5F4F8] hover:text-[#0176DE]"
@@ -75,14 +75,14 @@ export default function Header() {
 
       {/* Mobile Nav */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-[oklch(0.88_0.015_290)] bg-white animate-fade-in">
+        <div className="md:hidden border-t border-gray-100 bg-white animate-fade-in">
           <nav className="container py-3 flex flex-col gap-1">
             {navItems.map((item) => {
               const isActive = location === item.href || (item.href !== "/" && location.startsWith(item.href));
               return (
                 <Link key={item.href} href={item.href}>
                   <span
-                    className={`block px-4 py-2.5 rounded-md text-sm font-medium transition-all ${
+                    className={`block px-4 py-2.5 rounded-md text-sm font-medium transition-all cursor-pointer ${
                       isActive
                         ? "bg-[#E8F2FF] text-[#03122E] font-semibold"
                         : "text-gray-600 hover:bg-[#F5F4F8] hover:text-[#0176DE]"

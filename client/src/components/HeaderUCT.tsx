@@ -74,14 +74,14 @@ export default function HeaderUCT() {
             {/* Logo + Title */}
             <Link href="/">
               <div className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#8E44AD] to-[#5E2750] rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#0176DE] to-[#03122E] rounded-lg flex items-center justify-center text-white font-bold text-lg">
                   📊
                 </div>
                 <div className="hidden sm:block">
-                  <div className="text-sm font-bold text-[#3A1A45]" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                  <div className="text-sm font-bold text-[#03122E]" style={{ fontFamily: "Montserrat, sans-serif" }}>
                     OBSERVATORIO
                   </div>
-                  <div className="text-xs text-[#8E44AD] font-semibold">
+                  <div className="text-xs text-[#0176DE] font-semibold">
                     INDICADORES DE GÉNERO
                   </div>
                 </div>
@@ -92,7 +92,7 @@ export default function HeaderUCT() {
             <nav className="hidden md:flex items-center gap-8">
               {mainNavLinks.map((link, idx) => (
                 <Link key={idx} href={link.href}>
-                  <a className="text-sm font-semibold text-gray-700 hover:text-[#8E44AD] transition-colors border-b-2 border-transparent hover:border-[#8E44AD]">
+                  <a className="text-sm font-semibold text-gray-700 hover:text-[#0176DE] transition-colors border-b-2 border-transparent hover:border-[#0176DE]">
                     {link.label}
                   </a>
                 </Link>
@@ -124,7 +124,7 @@ export default function HeaderUCT() {
             <nav className="md:hidden mt-4 pt-4 border-t border-gray-200 flex flex-col gap-3">
               {mainNavLinks.map((link, idx) => (
                 <Link key={idx} href={link.href}>
-                  <a className="text-sm font-semibold text-gray-700 hover:text-[#8E44AD] transition-colors block py-2">
+                  <a className="text-sm font-semibold text-gray-700 hover:text-[#0176DE] transition-colors block py-2">
                     {link.label}
                   </a>
                 </Link>

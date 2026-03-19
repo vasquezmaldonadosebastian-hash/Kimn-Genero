@@ -60,8 +60,8 @@ export default function Indicadores() {
 
   // Mapeo de colores por área
   const colorMap: Record<string, { bg: string; border: string; text: string }> = {
-    Gestión: { bg: "#F3E8F9", border: "#E5D4F0", text: "#8E44AD" },
-    GESTIÓN: { bg: "#F3E8F9", border: "#E5D4F0", text: "#8E44AD" },
+    Gestión: { bg: "#E8F2FF", border: "#E5D4F0", text: "#0176DE" },
+    GESTIÓN: { bg: "#E8F2FF", border: "#E5D4F0", text: "#0176DE" },
     DOCENCIA: { bg: "#E0F2FE", border: "#BAE6FD", text: "#0891B2" },
     Docencia: { bg: "#E0F2FE", border: "#BAE6FD", text: "#0891B2" },
   };
@@ -74,7 +74,7 @@ export default function Indicadores() {
     return (
       <div className="min-h-screen bg-[#F5F4F8] flex items-center justify-center">
         <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-[#8E44AD] mb-4" />
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-[#0176DE] mb-4" />
           <p className="text-gray-600">Cargando indicadores...</p>
         </div>
       </div>
@@ -95,7 +95,7 @@ export default function Indicadores() {
             <span className="text-[#0176DE] font-medium">Indicadores</span>
           </nav>
 
-          <h1 className="text-3xl font-black text-[#3A1A45] mb-2" style={{ fontFamily: "Montserrat, sans-serif" }}>
+          <h1 className="text-3xl font-black text-[#03122E] mb-2" style={{ fontFamily: "Montserrat, sans-serif" }}>
             Sistema de Indicadores de Género
           </h1>
           <p className="text-gray-600 max-w-2xl">
@@ -116,7 +116,7 @@ export default function Indicadores() {
               placeholder="Buscar por nombre, código o descripción..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 border border-[#E8F2FF] rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#8E44AD] focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2.5 border border-[#E8F2FF] rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0176DE] focus:border-transparent"
             />
           </div>
 
@@ -126,7 +126,7 @@ export default function Indicadores() {
             <select
               value={filterArea}
               onChange={(e) => setFilterArea(e.target.value)}
-              className="flex-1 px-4 py-2.5 border border-[#E8F2FF] rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#8E44AD] focus:border-transparent"
+              className="flex-1 px-4 py-2.5 border border-[#E8F2FF] rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#0176DE] focus:border-transparent"
             >
               {(areas as string[]).map((area) => (
                 <option key={area} value={area}>
@@ -179,7 +179,7 @@ export default function Indicadores() {
                       {/* Content */}
                       <div className="p-5">
                         <h3
-                          className="text-lg font-bold text-[#3A1A45] mb-2 line-clamp-2 group-hover:text-[#8E44AD] transition-colors"
+                          className="text-lg font-bold text-[#03122E] mb-2 line-clamp-2 group-hover:text-[#0176DE] transition-colors"
                           style={{ fontFamily: "Montserrat, sans-serif" }}
                         >
                           {indicador["Nombre del indicador"]}
@@ -239,7 +239,7 @@ export default function Indicadores() {
                 setSearchTerm("");
                 setFilterArea("todos");
               }}
-              className="mt-4 px-6 py-2.5 bg-[#8E44AD] text-white font-semibold rounded-lg hover:bg-[#5E2750] transition-colors"
+              className="mt-4 px-6 py-2.5 bg-[#0176DE] text-white font-semibold rounded-lg hover:bg-[#03122E] transition-colors"
             >
               Limpiar filtros
             </button>

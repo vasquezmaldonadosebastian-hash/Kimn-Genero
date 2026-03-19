@@ -70,7 +70,7 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
   return (
     <div className="min-h-screen bg-[#F8F9FA]">
       {/* ═══ HERO ═══ */}
-      <section className="bg-gradient-to-br from-[#3A1A45] via-[#5E2750] to-[#8E44AD] relative overflow-hidden py-16">
+      <section className="bg-gradient-to-br from-[#03122E] via-[#03122E] to-[#0176DE] relative overflow-hidden py-16">
         {/* Decorative circles */}
         <div className="absolute w-[500px] h-[500px] rounded-full bg-white/4 -top-48 -right-24 pointer-events-none" />
         <div className="absolute w-[300px] h-[300px] rounded-full bg-white/4 -bottom-24 left-12 pointer-events-none" />
@@ -92,7 +92,7 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
           </p>
 
           <div className="flex gap-4 flex-wrap">
-            <button className="px-6 py-3 bg-white text-[#3A1A45] font-bold rounded-lg hover:shadow-lg transition-all">
+            <button className="px-6 py-3 bg-white text-[#03122E] font-bold rounded-lg hover:shadow-lg transition-all">
               Explorar Datos
             </button>
             <button className="px-6 py-3 bg-transparent border-2 border-white/40 text-white font-semibold rounded-lg hover:bg-white/12 transition-all">
@@ -115,9 +115,9 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
       <div className="max-w-6xl mx-auto px-6 py-12">
         {/* ── KPI Cards ── */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
-          <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#8E44AD]">
+          <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-[#0176DE]">
             <div className="text-sm text-gray-500 mb-2">Unidad de Medida</div>
-            <div className="text-3xl font-black text-[#3A1A45]" style={{ fontFamily: "Montserrat, sans-serif" }}>
+            <div className="text-3xl font-black text-[#03122E]" style={{ fontFamily: "Montserrat, sans-serif" }}>
               {indicador["Unidad de medida"] || "N/A"}
             </div>
           </div>
@@ -145,11 +145,11 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
         {/* ── Dashboard Card ── */}
         <div className="bg-white rounded-xl shadow-md overflow-hidden mb-12">
           {/* Toolbar */}
-          <div className="flex items-center justify-between px-6 py-4 bg-[#F3E8F9] border-b border-[#E5D4F0]">
+          <div className="flex items-center justify-between px-6 py-4 bg-[#E8F2FF] border-b border-[#E5D4F0]">
             <div className="flex items-center gap-3">
               <div className="w-3 h-3 rounded-full bg-[#27AE60]" />
               <div>
-                <div className="font-semibold text-[#3A1A45]" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="font-semibold text-[#03122E]" style={{ fontFamily: "Montserrat, sans-serif" }}>
                   {tieneIframe ? "Visualización Interactiva — Power BI" : "Visualización Pendiente"}
                 </div>
                 <div className="text-xs text-gray-500">Fuente: {indicador["Fuente de Dato"] || "Por definir"}</div>
@@ -172,7 +172,7 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
           </div>
 
           {/* Iframe or Placeholder */}
-          <div className="relative w-full bg-gradient-to-br from-[#F3E8F9] to-[#E8F2FF]" style={{ minHeight: "500px" }}>
+          <div className="relative w-full bg-gradient-to-br from-[#E8F2FF] to-[#E8F2FF]" style={{ minHeight: "500px" }}>
             {tieneIframe ? (
               <iframe
                 title="PreVersion"
@@ -185,7 +185,7 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
               />
             ) : (
               <div className="flex flex-col items-center justify-center h-full py-16 px-6">
-                <div className="w-20 h-20 rounded-3xl bg-[#F3E8F9] flex items-center justify-center mb-6">
+                <div className="w-20 h-20 rounded-3xl bg-[#E8F2FF] flex items-center justify-center mb-6">
                   <span className="text-4xl">📊</span>
                 </div>
                 <h3 className="text-xl font-bold text-[#4B5563] mb-3" style={{ fontFamily: "Montserrat, sans-serif" }}>
@@ -205,7 +205,7 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
           {tieneIframe && (
             <div className="flex items-center justify-between px-6 py-3 bg-[#F8F9FA] border-t border-gray-100 flex-wrap gap-3">
               <span className="text-xs text-gray-600 flex items-center gap-2">
-                <Info className="w-4 h-4 text-[#8E44AD]" />
+                <Info className="w-4 h-4 text-[#0176DE]" />
                 Los datos se actualizan siguiendo el cronograma institucional de indicadores.
               </span>
               <div className="flex gap-2">
@@ -221,7 +221,7 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-[#F3E8F9] flex items-center justify-center text-[#8E44AD]">
+              <div className="w-10 h-10 rounded-lg bg-[#E8F2FF] flex items-center justify-center text-[#0176DE]">
                 🎯
               </div>
               <h3 className="font-bold text-gray-900" style={{ fontFamily: "Montserrat, sans-serif" }}>
@@ -271,7 +271,7 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
           {/* Acordeón 1: Fuentes de Datos */}
           <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-3">
             <button
-              className="w-full flex items-center justify-between px-6 py-4 hover:bg-[#F3E8F9] transition-colors"
+              className="w-full flex items-center justify-between px-6 py-4 hover:bg-[#E8F2FF] transition-colors"
               onClick={() => toggleAccordion("fuentes")}
             >
               <div className="flex items-center gap-3">
@@ -317,7 +317,7 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
           {/* Acordeón 2: Metodología */}
           <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-3">
             <button
-              className="w-full flex items-center justify-between px-6 py-4 hover:bg-[#F3E8F9] transition-colors"
+              className="w-full flex items-center justify-between px-6 py-4 hover:bg-[#E8F2FF] transition-colors"
               onClick={() => toggleAccordion("metodologia")}
             >
               <div className="flex items-center gap-3">
@@ -358,15 +358,15 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
                     <p className="text-sm font-bold text-gray-900 mb-3">Donde:</p>
                     <ul className="space-y-2 text-sm text-gray-700">
                       <li className="flex gap-3">
-                        <span className="text-[#8E44AD] font-bold">•</span>
+                        <span className="text-[#0176DE] font-bold">•</span>
                         <span><strong>Numerador:</strong> Cantidad de elementos que cumplen el criterio de evaluación.</span>
                       </li>
                       <li className="flex gap-3">
-                        <span className="text-[#8E44AD] font-bold">•</span>
+                        <span className="text-[#0176DE] font-bold">•</span>
                         <span><strong>Denominador:</strong> Total de elementos evaluados en el período (semestre/año).</span>
                       </li>
                       <li className="flex gap-3">
-                        <span className="text-[#8E44AD] font-bold">•</span>
+                        <span className="text-[#0176DE] font-bold">•</span>
                         <span><strong>× 100:</strong> Factor de conversión a porcentaje (%).</span>
                       </li>
                     </ul>
@@ -381,7 +381,7 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
                         href={indicador["Instructivo de Cálculo"]}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#8E44AD] text-sm font-semibold hover:underline flex items-center gap-2"
+                        className="text-[#0176DE] text-sm font-semibold hover:underline flex items-center gap-2"
                       >
                         📄 Ver documento de instructivo
                       </a>
@@ -403,7 +403,7 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
           {/* Acordeón 3: Notas Técnicas */}
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
             <button
-              className="w-full flex items-center justify-between px-6 py-4 hover:bg-[#F3E8F9] transition-colors"
+              className="w-full flex items-center justify-between px-6 py-4 hover:bg-[#E8F2FF] transition-colors"
               onClick={() => toggleAccordion("notas")}
             >
               <div className="flex items-center gap-3">

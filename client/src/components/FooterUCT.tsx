@@ -18,18 +18,18 @@ export default function FooterUCT() {
             </h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#8E44AD] flex-shrink-0 mt-1" />
+                <MapPin className="w-5 h-5 text-[#0176DE] flex-shrink-0 mt-1" />
                 <p>Manuel Montt 56, Campus San Francisco, Edificio 03, 4° Nivel</p>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#8E44AD] flex-shrink-0" />
-                <a href="tel:+56452685126" className="hover:text-[#8E44AD] transition-colors">
+                <Phone className="w-5 h-5 text-[#0176DE] flex-shrink-0" />
+                <a href="tel:+56452685126" className="hover:text-[#0176DE] transition-colors">
                   (45) 2 685126
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[#8E44AD] flex-shrink-0" />
-                <a href="mailto:direcciondegenero@uct.cl" className="hover:text-[#8E44AD] transition-colors">
+                <Mail className="w-5 h-5 text-[#0176DE] flex-shrink-0" />
+                <a href="mailto:direcciondegenero@uct.cl" className="hover:text-[#0176DE] transition-colors">
                   direcciondegenero@uct.cl
                 </a>
               </div>
@@ -43,18 +43,18 @@ export default function FooterUCT() {
             </h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#8E44AD] flex-shrink-0 mt-1" />
+                <MapPin className="w-5 h-5 text-[#0176DE] flex-shrink-0 mt-1" />
                 <p>Manuel Montt 56, Campus San Francisco, Edificio 07, oficina 240</p>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#8E44AD] flex-shrink-0" />
-                <a href="tel:+56452685057" className="hover:text-[#8E44AD] transition-colors">
+                <Phone className="w-5 h-5 text-[#0176DE] flex-shrink-0" />
+                <a href="tel:+56452685057" className="hover:text-[#0176DE] transition-colors">
                   (45) 2 685057
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[#8E44AD] flex-shrink-0" />
-                <a href="mailto:observatorio@uct.cl" className="hover:text-[#8E44AD] transition-colors">
+                <Mail className="w-5 h-5 text-[#0176DE] flex-shrink-0" />
+                <a href="mailto:observatorio@uct.cl" className="hover:text-[#0176DE] transition-colors">
                   observatorio@uct.cl
                 </a>
               </div>
@@ -67,31 +67,31 @@ export default function FooterUCT() {
               Síguenos
             </h3>
             <div className="flex items-center gap-4 mb-6">
-              <a href="#" className="p-2 hover:bg-[#8E44AD] rounded-lg transition-colors" title="Facebook">
+              <a href="#" className="p-2 hover:bg-[#0176DE] rounded-lg transition-colors" title="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="p-2 hover:bg-[#8E44AD] rounded-lg transition-colors" title="Twitter">
+              <a href="#" className="p-2 hover:bg-[#0176DE] rounded-lg transition-colors" title="Twitter">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="p-2 hover:bg-[#8E44AD] rounded-lg transition-colors" title="Instagram">
+              <a href="#" className="p-2 hover:bg-[#0176DE] rounded-lg transition-colors" title="Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="p-2 hover:bg-[#8E44AD] rounded-lg transition-colors" title="LinkedIn">
+              <a href="#" className="p-2 hover:bg-[#0176DE] rounded-lg transition-colors" title="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="p-2 hover:bg-[#8E44AD] rounded-lg transition-colors" title="YouTube">
+              <a href="#" className="p-2 hover:bg-[#0176DE] rounded-lg transition-colors" title="YouTube">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
 
             <div className="space-y-2 text-sm">
-              <a href="#" className="block hover:text-[#8E44AD] transition-colors">
+              <a href="#" className="block hover:text-[#0176DE] transition-colors">
                 Política de Privacidad
               </a>
-              <a href="#" className="block hover:text-[#8E44AD] transition-colors">
+              <a href="#" className="block hover:text-[#0176DE] transition-colors">
                 Términos de Uso
               </a>
-              <a href="#" className="block hover:text-[#8E44AD] transition-colors">
+              <a href="#" className="block hover:text-[#0176DE] transition-colors">
                 Accesibilidad
               </a>
             </div>
@@ -104,16 +104,16 @@ export default function FooterUCT() {
           <div className="mb-6">
             <h4 className="text-sm font-bold text-white mb-3">Enlaces de Interés</h4>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
-              <a href="#" className="hover:text-[#8E44AD] transition-colors">
+              <a href="#" className="hover:text-[#0176DE] transition-colors">
                 Ministerio de la Mujer y Equidad de Género
               </a>
-              <a href="#" className="hover:text-[#8E44AD] transition-colors">
+              <a href="#" className="hover:text-[#0176DE] transition-colors">
                 Dirección de Género
               </a>
-              <a href="#" className="hover:text-[#8E44AD] transition-colors">
+              <a href="#" className="hover:text-[#0176DE] transition-colors">
                 Observatorio del Sistema Nacional de Ciencias
               </a>
-              <a href="#" className="hover:text-[#8E44AD] transition-colors">
+              <a href="#" className="hover:text-[#0176DE] transition-colors">
                 Observatorio Igualdad de Género CEPAL
               </a>
             </div>
