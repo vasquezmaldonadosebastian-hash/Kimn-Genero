@@ -7,7 +7,7 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } 
 
 export default function FooterUCT() {
   return (
-    <footer className="bg-[#1A1A2E] text-gray-100">
+    <footer className="bg-[#03122E] text-gray-100">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
@@ -18,18 +18,18 @@ export default function FooterUCT() {
             </h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#8E44AD] flex-shrink-0 mt-1" />
+                <MapPin className="w-5 h-5 text-[#FEC60D] flex-shrink-0 mt-1" />
                 <p>Manuel Montt 56, Campus San Francisco, Edificio 03, 4° Nivel</p>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#8E44AD] flex-shrink-0" />
-                <a href="tel:+56452685126" className="hover:text-[#8E44AD] transition-colors">
+                <Phone className="w-5 h-5 text-[#FEC60D] flex-shrink-0" />
+                <a href="tel:+56452685126" className="hover:text-[#FEC60D] transition-colors">
                   (45) 2 685126
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[#8E44AD] flex-shrink-0" />
-                <a href="mailto:direcciondegenero@uct.cl" className="hover:text-[#8E44AD] transition-colors">
+                <Mail className="w-5 h-5 text-[#FEC60D] flex-shrink-0" />
+                <a href="mailto:direcciondegenero@uct.cl" className="hover:text-[#FEC60D] transition-colors">
                   direcciondegenero@uct.cl
                 </a>
               </div>
@@ -43,18 +43,18 @@ export default function FooterUCT() {
             </h3>
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#8E44AD] flex-shrink-0 mt-1" />
+                <MapPin className="w-5 h-5 text-[#FEC60D] flex-shrink-0 mt-1" />
                 <p>Manuel Montt 56, Campus San Francisco, Edificio 07, oficina 240</p>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#8E44AD] flex-shrink-0" />
-                <a href="tel:+56452685057" className="hover:text-[#8E44AD] transition-colors">
+                <Phone className="w-5 h-5 text-[#FEC60D] flex-shrink-0" />
+                <a href="tel:+56452685057" className="hover:text-[#FEC60D] transition-colors">
                   (45) 2 685057
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[#8E44AD] flex-shrink-0" />
-                <a href="mailto:observatorio@uct.cl" className="hover:text-[#8E44AD] transition-colors">
+                <Mail className="w-5 h-5 text-[#FEC60D] flex-shrink-0" />
+                <a href="mailto:observatorio@uct.cl" className="hover:text-[#FEC60D] transition-colors">
                   observatorio@uct.cl
                 </a>
               </div>
