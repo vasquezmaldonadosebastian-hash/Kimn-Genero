@@ -51,7 +51,7 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
   // Determinar si tiene iframe (solo 02VGGE-04, que es el indicador 4)
   const tieneIframe = indicador["Código del indicador"] === "02VGGE-04";
   const iframeSrc: string | undefined = tieneIframe
-    ? "https://app.powerbi.com/view?r=eyJrIjoiODY2ZGRjNGEtZDEzMC00ZmMyLWFlY2YtOGM3N2E1ZTMwODFkIiwidCI6IjBkODQ5NzNiLThiYjctNDQ1OC05YzI5LTIxZmFiNDZmMTUyYyIsImMiOjR9&pageName=5a15333ea46c0791c848"
+    ? "https://app.powerbi.com/view?r=eyJrIjoiODY2ZGRjNGEtZDEzMC00ZmMyLWFlY2YtOGM3N2E1ZTMwODFkIiwidCI6IjBkODQ5NzNiLThiYjctNDQ1OC05YzI5LTIxZmFiNDZmMTUyYyIsImMiOjR9&pageName=69cd2d313a87a0e17e24"
     : undefined;
 
   // Validar instructivo
