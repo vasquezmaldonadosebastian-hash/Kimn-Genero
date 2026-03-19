@@ -32,10 +32,10 @@ export default function Header() {
               </div>
               <div className="leading-tight">
                 <div className="font-bold text-[#03122E] text-sm tracking-wide" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                  OBSERVATORIO
+                  KIMN
                 </div>
                 <div className="text-xs text-[#0176DE] font-medium tracking-wider uppercase" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-                  Indicadores de Género
+                  Género
                 </div>
               </div>
             </div>
