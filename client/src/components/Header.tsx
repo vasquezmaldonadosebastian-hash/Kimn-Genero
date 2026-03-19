@@ -1,5 +1,5 @@
 /*
- * Header — Observatorio de Indicadores de Género
+ * Header — KIMN Género
  * Design: Sticky header, 64px height, logo left + nav right
  * Colors: White bg with bottom border, primary UCT blue for active/hover
  */
