@@ -1,5 +1,5 @@
 /*
- * Home — Observatorio de Indicadores de Género
+ * Home — Kimn Género
  * Design: Hero con gradiente morado + imagen, KPIs animados, sección de dimensiones
  * Colors: #0176DE primary, #1A0A2E dark, #F5F4F8 bg
  */
@@ -193,7 +193,7 @@ export default function Home() {
               Datos para la igualdad de género
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              El Observatorio de Indicadores de Género es una plataforma institucional que pone a disposición del público datos desagregados por sexo en múltiples dimensiones: mercado laboral, educación, salud, participación política y violencia de género.
+              Kimn Género es una plataforma institucional que pone a disposición del público indicadores desagregados en múltiples dimensiones:TEXTO POR AGREGAR.
             </p>
             <p className="text-gray-600 leading-relaxed mb-6">
               Los indicadores se producen a partir de fuentes oficiales y son actualizados periódicamente para reflejar la situación actual de las brechas de género en el país.
