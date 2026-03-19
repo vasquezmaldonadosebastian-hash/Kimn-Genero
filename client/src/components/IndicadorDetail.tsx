@@ -143,63 +143,69 @@ export default function IndicadorDetail({ indicador }: IndicadorDetailProps) {
         </div>
 
         {/* ── Dashboard Card ── */}
-        <div className="bg-white rounded-xl shadow-md overflow-hidden mb-12">
-          {/* Toolbar */}
-          <div className="flex items-center justify-between px-6 py-4 bg-[#E8F2FF] border-b border-[#E5D4F0]">
-            <div className="flex items-center gap-3">
-              <div className="w-3 h-3 rounded-full bg-[#27AE60]" />
-              <div>
-                <div className="font-semibold text-[#03122E]" style={{ fontFamily: "Montserrat, sans-serif" }}>
-                  {tieneIframe ? "Visualización Interactiva — Power BI" : "Visualización Pendiente"}
-                </div>
-                <div className="text-xs text-gray-500">Fuente: {indicador["Fuente de Dato"] || "Por definir"}</div>
-              </div>
-            </div>
-
-            {tieneIframe && (
-              <div className="flex items-center gap-2">
-                <button className="p-2 hover:bg-white/50 rounded-lg transition-colors" title="Actualizar">
-                  <RefreshCw className="w-4 h-4 text-gray-600" />
-                </button>
-                <button className="p-2 hover:bg-white/50 rounded-lg transition-colors" title="Pantalla completa">
-                  <Expand className="w-4 h-4 text-gray-600" />
-                </button>
-                <button className="p-2 hover:bg-white/50 rounded-lg transition-colors" title="Compartir">
-                  <Share2 className="w-4 h-4 text-gray-600" />
-                </button>
-              </div>
-            )}
+ {/* ── Dashboard Card ── */}
+  <div className="bg-white rounded-xl shadow-md overflow-hidden mb-12">
+    {/* Toolbar */}
+    <div className="flex items-center justify-between px-6 py-4 bg-[#E8F2FF] border-b border-[#E5D4F0]">
+      <div className="flex items-center gap-3">
+        <div className="w-3 h-3 rounded-full bg-[#27AE60]" />
+        <div>
+          <div className="font-semibold text-[#03122E]" style={{ fontFamily: "Montserrat, sans-serif" }}>
+            {tieneIframe ? "Visualización Interactiva — Power BI" : "Visualización Pendiente"}
           </div>
+          <div className="text-xs text-gray-500">Fuente: {indicador["Fuente de Dato"] || "Por definir"}</div>
+        </div>
+      </div>
 
-          {/* Iframe or Placeholder */}
-          <div className="relative w-full bg-gradient-to-br from-[#E8F2FF] to-[#E8F2FF]" style={{ minHeight: "500px" }}>
-            {tieneIframe ? (
-              <iframe
-                title="PreVersion"
-                width="100%"
-                height="500"
-                src={iframeSrc}
-                frameBorder="0"
-                allowFullScreen={true}
-                style={{ display: "block" }}
-              />
-            ) : (
-              <div className="flex flex-col items-center justify-center h-full py-16 px-6">
-                <div className="w-20 h-20 rounded-3xl bg-[#E8F2FF] flex items-center justify-center mb-6">
-                  <span className="text-4xl">📊</span>
-                </div>
-                <h3 className="text-xl font-bold text-[#4B5563] mb-3" style={{ fontFamily: "Montserrat, sans-serif" }}>
-                  Visualización por Configurar
-                </h3>
-                <p className="text-center text-gray-500 max-w-md mb-6">
-                  Este indicador aún no cuenta con una visualización interactiva. La integración del dashboard de Power BI o Tableau está en proceso.
-                </p>
-                <div className="bg-white rounded-lg p-4 border border-[#E5D4F0] text-sm text-gray-600">
-                  <strong>Responsable de cálculo:</strong> {indicador["Responsable de Calculo"] || "Por asignar"}
-                </div>
-              </div>
-            )}
+      {tieneIframe && (
+        <div className="flex items-center gap-2">
+          <button className="p-2 hover:bg-white/50 rounded-lg transition-colors" title="Actualizar">
+            <RefreshCw className="w-4 h-4 text-gray-600" />
+          </button>
+          <button className="p-2 hover:bg-white/50 rounded-lg transition-colors" title="Pantalla completa">
+            <Expand className="w-4 h-4 text-gray-600" />
+          </button>
+          <button className="p-2 hover:bg-white/50 rounded-lg transition-colors" title="Compartir">
+            <Share2 className="w-4 h-4 text-gray-600" />
+          </button>
+        </div>
+      )}
+    </div>
+
+    {/* Iframe or Placeholder */}
+    {/* CAMBIO 1: Eliminamos el style inline y usamos clases de Tailwind para un alto responsivo (75% de la pantalla o un mínimo de 700px) */}
+    <div className="relative w-full bg-gradient-to-br from-[#E8F2FF] to-[#E8F2FF] h-[75vh] min-h-[700px]">
+      {tieneIframe ? (
+        <iframe
+          title="PreVersion"
+          width="100%"
+          /* CAMBIO 2: Reemplazamos height="500" por height="100%" para que llene el contenedor */
+          height="100%"
+          src={iframeSrc}
+          frameBorder="0"
+          allowFullScreen={true}
+          /* CAMBIO 3: Añadimos absolute e inset-0 si es necesario, o simplemente block w-full h-full */
+          className="w-full h-full absolute inset-0"
+          style={{ display: "block" }}
+        />
+      ) : (
+        <div className="flex flex-col items-center justify-center h-full py-16 px-6">
+          <div className="w-20 h-20 rounded-3xl bg-[#E8F2FF] flex items-center justify-center mb-6">
+            <span className="text-4xl">📊</span>
           </div>
+          <h3 className="text-xl font-bold text-[#4B5563] mb-3" style={{ fontFamily: "Montserrat, sans-serif" }}>
+            Visualización por Configurar
+          </h3>
+          <p className="text-center text-gray-500 max-w-md mb-6">
+            Este indicador aún no cuenta con una visualización interactiva. La integración del dashboard de Power BI o Tableau está en proceso.
+          </p>
+          <div className="bg-white rounded-lg p-4 border border-[#E5D4F0] text-sm text-gray-600">
+            <strong>Responsable de cálculo:</strong> {indicador["Responsable de Calculo"] || "Por asignar"}
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
 
           {/* Bottom toolbar */}
           {tieneIframe && (
