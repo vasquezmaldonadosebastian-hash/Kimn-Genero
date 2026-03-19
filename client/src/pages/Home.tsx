@@ -127,9 +127,9 @@ export default function Home() {
               className="text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight mb-4 opacity-0 animate-slide-up stagger-1"
               style={{ fontFamily: 'Montserrat, sans-serif', animationFillMode: "forwards" }}
             >
-              Sistema de Indicadores
+              Kimn
               <br />
-              <span className="text-[#FEC60D]">de Género</span>
+              <span className="text-[#FEC60D]">Género</span>
             </h1>
 
             {/* Subtitle */}
